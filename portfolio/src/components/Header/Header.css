@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;500;600;700;800&display=swap');
+
+.header {
+  max-width: 100%;
+  width: 100%;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  background: linear-gradient(315deg,
+      rgba(255, 255, 255, 0.12) 0%,
+      rgba(255, 255, 255, 0.04) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 0.6px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px 12px 0 0;
+  transition: background-color 0.3s ease;
+}
+
+.logo {
+  color: white;
+  font-family: 'Syne', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.resume {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(107, 158, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(107, 158, 255, 0.4);
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  border-radius: 9999px;
+  overflow: hidden;
+  transition: all 300ms;
+  color: white;
+  cursor: pointer;
+}
+
+
+.header::before {
+  top: auto;
+  bottom: 0;
+  left: auto;
+  right: 0;
+  width: 40%;
+  height: 1px;
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.35), transparent);
+}
+
+.header::after {
+  top: auto;
+  bottom: 0;
+  left: auto;
+  right: 0;
+  width: 1px;
+  height: 40%;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.35), transparent);
+}
+
+.links a {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  margin-left: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.theme {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 0.6px solid rgba(255, 255, 255, 0.10);
+  transition: border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+.theme.light {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.theme.dark {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/*Hover Effects*/
+
+.links a:hover {
+  color: #6B9EFF;
+}
+
+.theme:hover {
+  color: #6B9EFF;
+  border-color: #6B9EFF;
+}
+
+.resume:hover {
+  background-color: rgba(107, 158, 255, 0.3);
+  border-color: rgba(107, 158, 255, 0.6);
+  box-shadow: 0 10px 15px -3px rgba(107, 158, 255, 0.3),
+    0 4px 6px -4px rgba(107, 158, 255, 0.3);
+}
+
+.resume::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent);
+  transform: translateX(-100%);
+  transition: transform 700ms;
+}
+
+.resume:hover::after {
+  transform: translateX(100%);
+}
+
+/*Theme Transitions*/
+
+.theme.light {
+  background-color: rgba(255, 255, 255, 0.12);
+  transition: background-color 0.3s ease;
+  color: #1e2640;
+}
+
+.theme.dark {
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+.theme.light:hover {
+  color: #6B9EFF;
+}
+
+.header.light {
+  background: rgba(205, 211, 230, 0.80);
+  transition: background-color 0.3s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+.logo.light {
+  color: #1e2640;
+}
+
+.header.light .links a {
+  color: #2d3a5c;
+}
+
+
+.header.light .links a:hover {
+  color: #6B9EFF;
+}
+
+.resume.light {
+  color: #6B9EFF;
+}

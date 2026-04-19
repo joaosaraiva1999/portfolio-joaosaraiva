@@ -1,0 +1,175 @@
+.footer {
+
+  max-width: 100%;
+  width: 100%;
+  height: 268px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(315deg,
+      rgba(255, 255, 255, 0.12) 0%,
+      rgba(255, 255, 255, 0.04) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 0.6px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0 0 12px 12px;
+  transition: background-color 0.3s ease;
+}
+
+.First_Footer_Section {
+  width: 33%;
+  height: 100%;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 0.5rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.Second_Footer_Section {
+  width: 33%;
+  height: 100%;
+  padding: 0 40px 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 0.5rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.Third_Footer_Section {
+  width: 33%;
+  height: 100%;
+}
+
+.First_Rights_Footer_Item {
+  width: 50%;
+  height: 100%;
+}
+
+.Secondary_Rights_Footer_Item {
+  width: 50%;
+  height: 100%;
+}
+
+.Main_Footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 212px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+  padding: 40px 56px 40px 56px;
+}
+
+.Secondary_Footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 56px;
+  padding: 16px 56px 16px 56px;
+}
+
+.Secondary_Footer span {
+  color: rgba(255, 255, 255, 0.20);
+  font-size: 12px;
+}
+
+.Secondary_Footer a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #6B9EFF;
+  transition: color 0.3s ease;
+}
+
+.Footer_Roles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.Footer_Roles span {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.Footer_Quote {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.Second_Title_Footer_Section {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.Second_Links_Footer_Section {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.Second_Links_Footer_Section a {
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/*Hover Effects*/
+
+.Second_Links_Footer_Section a:hover {
+  color: #6B9EFF;
+  transition: color 0.3s ease;
+}
+
+.Second_Links_Footer_Section a.light:hover {
+  color: #6B9EFF;
+  transition: color 0.3s ease;
+}
+
+/*Theme Transitions*/
+
+.footer.light {
+  background: rgba(205, 211, 230, 0.80);
+  transition: background-color 0.3s ease;
+}
+
+.First_Footer_Section.light {
+  border-right: 1.3px solid rgba(0, 0, 0, 0.10);
+}
+
+.Second_Footer_Section.light {
+  border-right: 1.3px solid rgba(0, 0, 0, 0.10);
+}
+
+.Main_Footer.dark {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.Footer_Roles span.light {
+  color: #3a4a6b;
+  transition: color 0.3s ease;
+}
+
+.Footer_Quote p.light {
+  color: rgba(58, 74, 107, 0.85);
+  transition: color 0.3s ease;
+}
+
+.Second_Title_Footer_Section span.light {
+  color: rgba(58, 74, 107, 0.85);
+  transition: color 0.3s ease;
+}
+
+.Second_Links_Footer_Section a.light {
+  color: #3a4a6b;
+  transition: color 0.3s ease;
+}
+
+.Secondary_Footer span.light {
+  color: rgba(58, 74, 107, 0.75);
+  transition: color 0.3s ease;
+}
