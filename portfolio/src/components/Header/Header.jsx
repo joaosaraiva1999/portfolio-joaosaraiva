@@ -2,37 +2,71 @@ import './Header.css'
 import { useContext } from 'react'
 import { MdDarkMode, MdLightMode, MdOutlineDownload } from 'react-icons/md'
 import { ThemeContext } from '../../context/ThemeContext.jsx'
+import { Menu, X } from "lucide-react"
+import { useState } from 'react'
 
 export default function Header() {
   const { theme, toggleTheme } = useContext(ThemeContext)
+  const [isOpen, setisOpen] = useState(false)
 
+  const toggleSidebar = () => {
+    setisOpen(!isOpen)
+  }
   return (
-    <header>
-      <div className={`header ${theme}`}>
-        <div className={`logo ${theme}`}>
-          <span style={{ color: '#6B9EFF' }}>{'<'}</span>Joao<span style={{ color: '#6B9EFF' }}>{'./>'}</span>
+    <>
+      <nav className={`sidebar ${isOpen ? 'open' : ''} ${theme} `}>
+        <div className={`sidebar-header ${theme}`}>
+          <span>MENU</span>
+          <button className={`sidebar_close ${theme}`} onClick={toggleSidebar} type="button" aria-label="Toggle navigation menu"><X className={`sidebar_close-icon ${theme}`} /></button>
         </div>
-        <div className={`links ${theme}`}>
+        <div className={`sidebar_links ${theme}`}>
           <a href="#projects">Projects</a>
           <a href="#about">About</a>
           <a href="#education">Education</a>
           <a href="#contact">Contact</a>
         </div>
-        <div className="buttons">
+
+        <div className={`sidebar_theme ${theme}`}>
+          <div className={`sidebar_line ${theme}`}></div>
           <button
-            className={`theme ${theme}`}
+            className={`sidebar_theme-button ${theme}`}
             type='button'
             aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
             onClick={toggleTheme}
           >
-            {theme === 'dark' ? <MdLightMode className='theme-icon' size={18} /> : <MdDarkMode className='theme-icon' size={18} />}
+            <span>{theme === 'dark' ? 'LIGHT MODE' : 'DARK MODE'}</span>
+            {theme === 'dark' ? <MdLightMode className='theme-icon' size={18} /> : <MdDarkMode className='theme-icon' />}
           </button>
-          <div className={`resume ${theme}`} onClick={() => window.open('/João_Saraiva_-_Junior_Web_Developer.pdf', '_blank')}>
-            VIEW RESUME
-            <span style={{ color: '#6B9EFF', paddingTop: '0.2rem' }}><MdOutlineDownload size={18} /></span>
+        </div>
+      </nav>
+      <header>
+        <div className={`header ${theme}`}>
+          <div className={`logo ${theme}`}>
+            <span style={{ color: '#6B9EFF' }}>{'<'}</span>Joao<span style={{ color: '#6B9EFF' }}>{'./>'}</span>
+          </div>
+          <div className={`links ${theme}`}>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div className="buttons">
+            <button className={`sidebar-toggle ${theme}`} onClick={toggleSidebar} type="button" aria-label="Toggle navigation menu"><Menu className={`sidebar-toggle-icon ${theme}`} /></button>
+            <button
+              className={`theme ${theme}`}
+              type='button'
+              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+              onClick={toggleTheme}
+            >
+              {theme === 'dark' ? <MdLightMode className='theme-icon' size={18} /> : <MdDarkMode className='theme-icon' size={18} />}
+            </button>
+            <div className={`resume ${theme}`} onClick={() => window.open('/João_Saraiva_-_Junior_Web_Developer.pdf', '_blank')}>
+              VIEW RESUME
+              <span style={{ color: '#6B9EFF', paddingTop: '0.2rem' }}><MdOutlineDownload size={18} /></span>
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   )
 }
