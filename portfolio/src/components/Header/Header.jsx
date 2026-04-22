@@ -16,14 +16,14 @@ export default function Header() {
     <>
       <nav className={`sidebar ${isOpen ? 'open' : ''} ${theme} `}>
         <div className={`sidebar-header ${theme}`}>
-          <span>MENU</span>
+          <span className={theme}>MENU</span>
           <button className={`sidebar_close ${theme}`} onClick={toggleSidebar} type="button" aria-label="Toggle navigation menu"><X className={`sidebar_close-icon ${theme}`} /></button>
         </div>
         <div className={`sidebar_links ${theme}`}>
-          <a href="#projects">Projects</a>
-          <a href="#about">About</a>
-          <a href="#education">Education</a>
-          <a href="#contact">Contact</a>
+          <a className={theme} href="#projects">Projects</a>
+          <a className={theme} href="#about">About</a>
+          <a className={theme} href="#education">Education</a>
+          <a className={theme} href="#contact">Contact</a>
         </div>
 
         <div className={`sidebar_theme ${theme}`}>

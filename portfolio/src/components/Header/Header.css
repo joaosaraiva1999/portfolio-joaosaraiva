@@ -231,6 +231,8 @@
   cursor: pointer;
 }
 
+
+
 /*Hover Effects*/
 
 .sidebar-toggle:hover {
@@ -249,6 +251,11 @@
 .sidebar_close:hover {
   color: rgba(255, 255, 255, 1);
   background-color: rgba(255, 255, 255, 0.10);
+}
+
+.sidebar_close.light:hover {
+  background-color: rgba(0, 0, 0, 0.12);
+  color: #1e2640;
 }
 
 .sidebar_links a:hover {
@@ -288,7 +295,49 @@
   transform: translateX(100%);
 }
 
+.sidebar_links a.light:hover {
+  color: #6B9EFF;
+  background-color: rgba(255, 255, 255, 0.40);
+}
+
+.sidebar_theme-button.light:hover {
+  background-color: rgba(107, 158, 255, 0.20);
+  color: #6B9EFF;
+  border-color: rgba(107, 158, 255, 0.50);
+}
+
 /*Theme Transitions*/
+
+.sidebar_line.light {
+  background-color: rgba(0, 0, 0, 0.10);
+}
+
+.sidebar_theme-button.light {
+  background-color: rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  color: #2d3a5c;
+}
+
+.sidebar-header.light {
+  border-bottom: rgba(0, 0, 0, 0.10) solid 1px;
+}
+
+.sidebar-header span.light {
+  color: #2d3a5c;
+}
+
+.sidebar_close.light {
+  background-color: rgba(0, 0, 0, 0.08);
+  border: rgba(0, 0, 0, 0.15) solid 1px;
+}
+
+.sidebar_close-icon.light {
+  color: #2d3a5c;
+}
+
+.sidebar_links a.light {
+  color: #2d3a5c;
+}
 
 .theme.light {
   background-color: rgba(255, 255, 255, 0.12);
@@ -345,5 +394,7 @@
   .sidebar-toggle {
     display: flex;
   }
+
+
 
 }

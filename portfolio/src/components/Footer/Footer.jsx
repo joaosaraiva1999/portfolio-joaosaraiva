@@ -1,6 +1,9 @@
 import './Footer.css'
 import { ThemeContext } from '../../context/ThemeContext.jsx'
 import { useContext } from 'react'
+import { Icon } from 'lucide-react'
+import { SiGithub, SiLinkedin, SiDribbble } from 'react-icons/si'
+import { Socials_buttons } from '../../data/SocialButtons.js'
 
 export default function Footer() {
   const { theme, toggleTheme } = useContext(ThemeContext)
@@ -33,7 +36,18 @@ export default function Footer() {
             <a className={theme} href="#contact">Contact</a>
           </div>
         </div>
-        <div className={`Third_Footer_Section ${theme}`}></div>
+        <div className={`Third_Footer_Section ${theme}`}>
+          <div className={`Second_Title_Footer_Section ${theme}`}>
+            <span className={theme}>SOCIAL MEDIA</span>
+          </div>
+          <div className="social_buttons">
+            {Socials_buttons.map(({ id, Icon, link }) => (
+              <button key={id} className={`social_button ${theme}`} onClick={() => window.open(link, '_blank')}>
+                <Icon className={`social-button-icon ${theme}`} />
+              </button>
+            ))}
+          </div>
+        </div>
       </section>
       <section className={`Secondary_Footer ${theme}`}>
         <span className={theme}>© 2026 João Saraiva. All rights reserved.</span>
