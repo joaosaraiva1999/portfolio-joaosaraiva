@@ -41,7 +41,7 @@ export default function Header() {
       </nav>
       <header>
         <div className={`header ${theme}`}>
-          <div className={`logo ${theme}`}>
+          <div className={`logo ${theme}`} onClick={() => window.location.href = '#home'}>
             <span style={{ color: '#6B9EFF' }}>{'<'}</span>Joao<span style={{ color: '#6B9EFF' }}>{'./>'}</span>
           </div>
           <div className={`links ${theme}`}>
@@ -66,7 +66,7 @@ export default function Header() {
             </div>
           </div>
         </div>
-      </header>
+      </header >
     </>
   )
 }

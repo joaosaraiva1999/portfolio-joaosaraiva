@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;500;600;700;800&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,16 +8,21 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #0f0f13;
+  background:
+    radial-gradient(ellipse at top left, rgba(107, 158, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(107, 158, 255, 0.05) 0%, transparent 50%),
+    #1a1a1a;
+  min-height: 100vh;
   color: #333;
   margin: 20px;
 }
 
 html[data-theme="light"] body {
-  background: linear-gradient(to bottom right, #b8bfd4, #c2c9de, #bcc4d8);
   color: #1e2640;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.10), 0 4px 6px -4px rgba(0, 0, 0, 0.10);
   border-radius: 11px !important;
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.2),
+    0 8px 10px -6px rgba(0, 0, 0, 0.2);
   overflow-x: hidden;
+  background: linear-gradient(to bottom right, #b8bfd4, #c2c9de, #bcc4d8);
 }
-
