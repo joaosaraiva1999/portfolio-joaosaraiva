@@ -5,10 +5,13 @@
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero_profile {
-  width: 100%;
+  width: 672px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,6 +92,25 @@
   font-size: 12px;
 }
 
+.download-resume {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 14px 28px;
+  border-radius: 9999px;
+  border: 1px solid rgba(107, 158, 255, 0.4);
+  background-color: rgba(107, 158, 255, 0.2);
+  backdrop-filter: blur(12px);
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  box-shadow: 0 10px 15px -3px rgba(107, 158, 255, 0.2),
+    0 4px 6px -4px rgba(107, 158, 255, 0.2);
+  transition: all 300ms ease;
+  cursor: pointer;
+  gap: 10px;
+}
+
 .profile-title {
   width: 100%;
   display: flex;
@@ -105,6 +127,20 @@
   margin-bottom: 32px;
 }
 
+.profile-intro {
+  margin-bottom: 32px;
+}
+
+.profile-intro p {
+  font-size: 17px;
+  text-align: center;
+  line-height: 1.625;
+  font-weight: 300;
+  transition: color 300ms;
+  color: rgba(255, 255, 255, 0.35);
+  margin-bottom: 32px;
+}
+
 /*Hover Effects*/
 
 .hero_img:hover {
@@ -114,7 +150,50 @@
     0 0 0 4px rgba(107, 158, 255, 0.20);
 }
 
+.download-resume:hover {
+  background-color: rgba(107, 158, 255, 0.3);
+  border-color: rgba(107, 158, 255, 0.6);
+  box-shadow: 0 10px 15px -3px rgba(107, 158, 255, 0.3),
+    0 4px 6px -4px rgba(107, 158, 255, 0.3);
+}
+
+.download-resume::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent);
+  transform: translateX(-100%);
+  transition: transform 700ms;
+}
+
+.download-resume:hover::after {
+  transform: translateX(100%);
+}
+
+
 /*Theme Effects*/
+
+.download-resume.light {
+  background-color: rgba(107, 158, 255, 0.45);
+  border-color: rgba(107, 158, 255, 0.80);
+  box-shadow: 0 10px 15px -3px rgba(107, 158, 255, 0.40),
+    0 4px 6px -4px rgba(107, 158, 255, 0.40);
+  color: #3a6be0;
+}
+
+.download-resume.light:hover {
+  background-color: rgba(107, 158, 255, 0.60);
+  border-color: rgba(107, 158, 255, 1);
+  box-shadow: 0 20px 25px -5px rgba(107, 158, 255, 0.60),
+    0 8px 10px -6px rgba(107, 158, 255, 0.60);
+}
+
+.profile-intro p.light {
+  color: #0a0f1f;
+}
 
 .profile-title p.light {
   color: #2d3a5c;
@@ -125,8 +204,16 @@
 }
 
 .hero-work-status.light {
-  background: rgba(107, 158, 255, 0.10);
-  border: 1px solid rgba(107, 158, 255, 0.30);
+  background: rgba(107, 158, 255, 0.18);
+  border: 1px solid rgba(107, 158, 255, 0.55);
+}
+
+.work-status-text.light {
+  color: #4a7fe0;
+}
+
+.dot.light {
+  background: #6B9EFF;
 }
 
 .hero_img.light {
