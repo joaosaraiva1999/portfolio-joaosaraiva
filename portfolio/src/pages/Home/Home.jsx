@@ -3,6 +3,7 @@ import { useContext } from 'react'
 import { ThemeContext } from '../../context/ThemeContext.jsx'
 import profile_pic from '../../assets/portfolio-pic.jpg'
 import { MdOutlineDownload } from 'react-icons/md'
+import { skills } from '../../data/Skills.js'
 
 export default function Home() {
   const { theme, toggleTheme } = useContext(ThemeContext)
@@ -29,10 +30,18 @@ export default function Home() {
           </div>
           <button className={`download-resume ${theme}`}>VIEW RESUME<span style={{ color: '#6B9EFF', paddingTop: '0.2rem' }}><MdOutlineDownload size={18} /></span></button>
         </section>
-        <div className={`hero_skills ${theme}`}>
 
+      </section>
+      <section className='skills'>
+        <div className={`hero_skills ${theme}`}>
+          {skills.map(({ id, icon: Icon, text }) => (
+            <span className={`skills-icon ${theme}`} key={id}>
+              <Icon />
+              {text}
+            </span>
+          ))}
         </div>
       </section>
-    </main>
+    </main >
   )
 }

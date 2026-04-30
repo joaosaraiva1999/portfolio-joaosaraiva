@@ -41,14 +41,14 @@ export default function Header() {
       </nav>
       <header>
         <div className={`header ${theme}`}>
-          <div className={`logo ${theme}`} onClick={() => window.location.href = '#home'}>
+          <div className={`logo ${theme}`} onClick={() => window.location.href = '/'}>
             <span style={{ color: '#6B9EFF' }}>{'<'}</span>Joao<span style={{ color: '#6B9EFF' }}>{'./>'}</span>
           </div>
           <div className={`links ${theme}`}>
-            <a href="#projects">Projects</a>
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
+            <a onClick={() => window.location.href = 'Projects'}>Projects</a>
+            <a onClick={() => window.location.href = 'About'}>About</a>
+            <a onClick={() => window.location.href = 'Education'}>Education</a>
+            <a onClick={() => window.location.href = 'contact'}>Contact</a>
           </div>
           <div className="buttons">
             <button className={`sidebar-toggle ${theme}`} onClick={toggleSidebar} type="button" aria-label="Toggle navigation menu"><Menu className={`sidebar-toggle-icon ${theme}`} /></button>

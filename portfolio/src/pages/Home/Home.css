@@ -1,13 +1,62 @@
-.hero {
-  width: 100%;
-  height: auto;
+.home-page {
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.skills {
+  max-width: 100%;
+  width: 100%;
+  padding-bottom: 80px;
+}
+
+.hero {
+  width: 100%;
+  height: auto;
   padding: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  padding-bottom: 0;
+}
+
+.hero_skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 80px;
+  width: 100%;
+  margin-top: 64px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero_skills span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 0.6px solid rgba(255, 255, 255, 0.08);
+  color: #9ca3af;
+  font-weight: 400;
+  letter-spacing: 2px;
+  cursor: default;
+  transition: all 0.3s ease;
+}
+
+.skills-icon {
+  font-size: 11px !important;
+}
+
+.hero_skills .lucide.lucide-plug {
+  width: 12.8px !important;
+  height: 12.8px !important;
 }
 
 .hero_profile {
@@ -150,6 +199,11 @@
     0 0 0 4px rgba(107, 158, 255, 0.20);
 }
 
+.hero_skills span:hover {
+  border-color: #4a7fe0;
+  color: #4a7fe0;
+}
+
 .download-resume:hover {
   background-color: rgba(107, 158, 255, 0.3);
   border-color: rgba(107, 158, 255, 0.6);
@@ -175,6 +229,17 @@
 
 
 /*Theme Effects*/
+
+.hero_skills.light {
+  border-top: 1px solid rgba(0, 0, 0, 0.10);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+.skills-icon.light {
+  background: #E8EBF3;
+  border: 0.6px solid #D9DDEA;
+  color: #5F667D;
+}
 
 .download-resume.light {
   background-color: rgba(107, 158, 255, 0.45);
