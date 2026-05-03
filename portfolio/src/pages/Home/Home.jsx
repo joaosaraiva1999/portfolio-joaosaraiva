@@ -4,6 +4,7 @@ import { ThemeContext } from '../../context/ThemeContext.jsx'
 import profile_pic from '../../assets/portfolio-pic.jpg'
 import { MdOutlineDownload } from 'react-icons/md'
 import { skills } from '../../data/Skills.js'
+import { quicknav } from '../../data/Quicknav.js'
 
 export default function Home() {
   const { theme, toggleTheme } = useContext(ThemeContext)
@@ -40,6 +41,24 @@ export default function Home() {
               {text}
             </span>
           ))}
+        </div>
+      </section>
+      <section className='quicknav'>
+        <div className={`quicknav-container ${theme}`}>
+          <h3>QUICK NAVIGATION</h3>
+          <div className={`quicknav-cards ${theme}`}>
+            {quicknav.map(({ id, icon: Icon, title, subtitle, href }) => (
+              <div key={id} className={`card ${theme}`} onClick={() => window.location.href = href}>
+                <div className={`card-icon ${theme}`}>
+                  <Icon />
+                </div>
+                <div className={`card-content ${theme}`}>
+                  <span>{title}</span>
+                  <span>{subtitle}</span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </main >
