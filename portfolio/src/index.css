@@ -20,9 +20,6 @@ body {
 html[data-theme="light"] body {
   color: #1e2640;
   border-radius: 11px !important;
-  box-shadow:
-    0 20px 25px -5px rgba(0, 0, 0, 0.2),
-    0 8px 10px -6px rgba(0, 0, 0, 0.2);
   overflow-x: hidden;
   background: linear-gradient(to bottom right, #b8bfd4, #c2c9de, #bcc4d8);
 }

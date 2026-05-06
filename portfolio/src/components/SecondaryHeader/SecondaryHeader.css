@@ -1,0 +1,39 @@
+.Secondary-Header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+.go-Back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 0.5px solid rgba(255, 255, 255, 0.08);
+  color: #9ca3af;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  font-family: 'Syne', sans-serif;
+}
+
+.go-Back svg {
+  width: 14px;
+  display: flex;
+  align-items: center;
+}
+
+/*Hover Effects*/
+
+.go-Back:hover {
+  border-color: #4a7fe0;
+}
+
+.go-Back:hover svg {
+  color: #4a7fe0;
+}

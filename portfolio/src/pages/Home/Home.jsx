@@ -10,7 +10,7 @@ export default function Home() {
   const { theme, toggleTheme } = useContext(ThemeContext)
 
   return (
-    <main className="home-page">
+    <main className={`home-page ${theme}`}>
       <section className={`hero ${theme}`}>
         <section className={`hero_profile ${theme}`}>
           <div className={`hero_img ${theme}`}>
