@@ -326,6 +326,28 @@
 
 /*Theme Effects*/
 
+.card.light {
+  background-color: rgba(255, 255, 255, 0.50);
+}
+
+.card-icon.light {
+  background-color: rgba(58, 74, 107, 0.20);
+  box-shadow: none;
+}
+
+.title.light {
+  color: #3a4a6b !important;
+}
+
+.Icon.light {
+  stroke: #3a4a6b !important;
+}
+
+.subtitle.light {
+  color: rgba(58, 74, 107, 0.90) !important;
+}
+
+
 .home-page.light {
   box-shadow:
     0 20px 25px -5px rgba(0, 0, 0, 0.2),

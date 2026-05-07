@@ -39,7 +39,7 @@ export default function Header() {
           </button>
         </div>
       </nav>
-      <header>
+      <header className={theme}>
         <div className={`header ${theme}`}>
           <div className={`logo ${theme}`} onClick={() => window.location.href = '/'}>
             <span style={{ color: '#6B9EFF' }}>{'<'}</span>Joao<span style={{ color: '#6B9EFF' }}>{'./>'}</span>

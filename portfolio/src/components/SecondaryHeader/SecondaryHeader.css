@@ -19,13 +19,30 @@
   cursor: pointer;
   font-weight: 700;
   transition: all 0.3s ease;
-  font-family: 'Syne', sans-serif;
+  font-family: "Syne", sans-serif;
 }
 
 .go-Back svg {
   width: 14px;
   display: flex;
   align-items: center;
+}
+
+.toggle-theme {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.12);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 0.6px solid rgba(255, 255, 255, 0.1);
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease,
+    background-color 0.3s ease;
 }
 
 /*Hover Effects*/
@@ -36,4 +53,44 @@
 
 .go-Back:hover svg {
   color: #4a7fe0;
+}
+
+.go-Back.light:hover {
+  border: 0.4px solid #4a7fe0;
+  background-color: rgba(107, 158, 255, 0.1);
+}
+
+.toggle-theme:hover {
+  border: 0.4px solid #4a7fe0;
+  color: #4a7fe0;
+}
+
+.toggle-theme.light:hover {
+  border: 0.4px solid #4a7fe0;
+  background-color: rgba(107, 158, 255, 0.1);
+  color: #4a7fe0;
+}
+
+/*Theme Transitions*/
+
+.go-Back.light {
+  background: rgba(0, 0, 0, 0.06);
+  border: 0.4px solid rgba(0, 0, 0, 0.15);
+  color: #1a1a1a;
+  box-shadow: 0px 4px 8px -2px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.toggle-theme.light {
+  background: rgba(0, 0, 0, 0.06);
+  border: 0.4px solid rgba(0, 0, 0, 0.15);
+  color: #1a1a1a;
+}
+
+/*Media Queries*/
+
+@media (max-width: 768px) {
+  .toggle-theme {
+    display: none;
+  }
 }

@@ -50,11 +50,11 @@ export default function Home() {
             {quicknav.map(({ id, icon: Icon, title, subtitle, href }) => (
               <div key={id} className={`card ${theme}`} onClick={() => window.location.href = href}>
                 <div className={`card-icon ${theme}`}>
-                  <Icon />
+                  <Icon className={`Icon ${theme}`} />
                 </div>
                 <div className={`card-content ${theme}`}>
-                  <span>{title}</span>
-                  <span>{subtitle}</span>
+                  <span className={`title ${theme}`}>{title}</span>
+                  <span className={`subtitle ${theme}`}>{subtitle}</span>
                 </div>
               </div>
             ))}
