@@ -4,11 +4,150 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   margin: var(--spacing-sub-page);
+  display: flex;
+  padding: 48px;
+  gap: 4rem;
+}
+
+.about-right {
+  width: 50%;
+}
+
+.about-left {
+  width: 50%;
+}
+
+.title h1 {
+  font-size: 48px;
+  color: #ffff;
+  font-family: 'Syne', sans-serif;
+  margin-bottom: 32px;
+}
+
+.title-skills h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 24px;
+  color: #ffff;
+  margin-bottom: 24px;
+}
+
+.title-tools h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 24px;
+  color: #ffff;
+  margin-bottom: 24px;
+}
+
+.title-experience h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 24px;
+  color: #ffff;
+  margin-bottom: 24px;
+}
+
+.grid-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+  margin-bottom: 42px;
+}
+
+
+.card {
+  background-color: oklab(0.999994 0.0000455678 0.0000200868 / 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 16px 20px;
+  color: rgb(210, 215, 225);
+  align-items: center;
+  cursor: default;
+}
+
+.card-experience {
+  background-color: oklab(0.999994 0.0000455678 0.0000200868 / 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 20px;
+  color: rgb(210, 215, 225);
+  align-items: center;
+  transition: all ease 300ms;
+}
+
+.about-text p {
+  font-size: 18px;
+  color: rgb(102, 108, 115);
+}
+
+.about-text p:nth-of-type(-n+2) {
+  margin-bottom: 24px;
+}
+
+.experience-first-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.title-experience {
+  font-family: 'Syne', sans-serif;
+  font-size: 18px;
+}
+
+.date-experience {
+  font-weight: 300;
+  color: oklch(0.551 0.027 264.364);
+  font-size: 14px;
+}
+
+.experience-details {
+  color: oklch(0.707 0.022 261.325);
+  font-weight: 400;
 }
 
 /*Hover Effects*/
 
+.card-experience:hover {
+  border: 0.6px solid #4a7fe0;
+}
+
 /*Theme Transitions*/
+
+.experience-details.light {
+  color: #6B7A9F;
+}
+
+.card.light {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #2D3A5C;
+}
+
+.card-experience.light {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #2D3A5C;
+}
+
+.title-skills h2.light {
+  color: #1e2640;
+}
+
+.title-experience h2.light {
+  color: #1e2640;
+}
+
+.title-tools h2.light {
+  color: #1e2640;
+}
+
+.title h1.light {
+  color: #1e2640;
+}
+
+.about-text p.light {
+  color: #344060;
+}
 
 .about-page.light {
   box-shadow:
