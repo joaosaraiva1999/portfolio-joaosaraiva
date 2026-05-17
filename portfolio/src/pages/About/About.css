@@ -54,7 +54,7 @@
 }
 
 
-.card {
+.grid-list .card {
   background-color: oklab(0.999994 0.0000455678 0.0000200868 / 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
@@ -108,6 +108,10 @@
 }
 
 /*Hover Effects*/
+
+.grid-list .card:hover {
+  border: 0.6px solid #4a7fe0;
+}
 
 .card-experience:hover {
   border: 0.6px solid #4a7fe0;

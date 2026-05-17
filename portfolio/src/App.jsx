@@ -5,6 +5,9 @@ import Footer from './components/Footer/Footer.jsx'
 import Home from './pages/Home/Home.jsx'
 import About from './pages/About/About.jsx'
 import Contacts from './pages/Contacts/Contacts.jsx'
+import Projects from './pages/Projects Page/Projects.jsx'
+import Portfolio from './pages/Projects Page/Portfolio/Portfolio.jsx'
+import LandingPage from './pages/Projects Page/Landing Page/Landingpage.jsx'
 import { ThemeProvider } from './context/ThemeContext.jsx' // For theme management
 import { useLocation } from 'react-router-dom';
 
@@ -20,7 +23,10 @@ function AppLayout() {
         <Route path="/about" element={<About />} />
         <Route path="/contacts" element={<Contacts />} />
         {/* <Route path="/education" element={<Education />} /> */}
-        {/*<Route path="/projects" element={<Projects />} />*/}
+        <Route path="/projects" element={<Projects />}>
+          <Route path="portfolio" element={<Portfolio />} />
+          <Route path="landingpage" element={<LandingPage />} />
+        </Route>
       </Routes>
       {localpath.pathname !== '/' ? '' : <Footer />}
     </>
