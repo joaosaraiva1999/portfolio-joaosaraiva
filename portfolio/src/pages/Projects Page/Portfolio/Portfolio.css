@@ -1,0 +1,57 @@
+.Portfolio-page {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  margin: 0 337px;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1.5rem, 2.5vw, 3rem);
+  gap: clamp(1.5rem, 2vw, 2.5rem);
+  transition: all ease-in 0.3ms;
+}
+
+.close-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 0.6px solid rgba(255, 255, 255, 0.08);
+  background-color: oklab(0.9994 0.0000455678 0.0000200868 / 0.04);
+  color: #9ca3af;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  transition: all 0.3s ease;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.close-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+.button-close-section {
+  width: 100%;
+}
+
+/*Hover Transitions*/
+
+.close-btn:hover {
+  color: #4a7fe0;
+  border: 0.6px solid #4a7fe0;
+}
+
+/*Theme Transitions*/
+
+.Portfolio-page.light {
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.2),
+    0 8px 10px -6px rgba(0, 0, 0, 0.2);
+  transition: all ease-in 0.3ms;
+}
+
+/*Media Queries*/

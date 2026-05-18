@@ -2,53 +2,56 @@
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  margin: var(--spacing-sub-page);
+  border-radius: 1rem;
+  margin: 0 337px;
   display: flex;
-  padding: 48px;
   flex-direction: column;
-}
-
-.projects-main-section {
-  width: 100%;
+  padding: clamp(1.5rem, 2.5vw, 3rem);
+  gap: clamp(1.5rem, 2vw, 2.5rem);
 }
 
 .projects-intro-section {
   width: 100%;
-  margin-bottom: 64px;
+  margin-bottom: clamp(1.5rem, 3vw, 4rem);
+  max-width: 100%;
 }
 
 .projects-intro-section h1 {
-  font-size: 48px;
+  font-size: clamp(2.5rem, 3vw, 3rem);
   color: #ffff;
   font-family: 'Syne', sans-serif;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   width: 100%;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
 }
 
 .projects-intro-section p {
-  font-size: 18px;
+  font-size: 1.125rem;
   color: rgb(102, 108, 115);
-  width: 60%;
+  max-width: 58ch;
+  line-height: 1.75;
 }
 
 .projects-main-section {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.2rem;
 }
 
 .card-project {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 24px;
+  gap: 1.25rem;
   background-color: oklch(0.999994 0.0000455678 0.0000200868 / 0.03);
-  border-radius: 12px;
-  padding: 1.5rem;
+  border-radius: 1rem;
+  padding: clamp(1rem, 1.2vw, 1.4rem);
   border: 1px solid rgba(255, 255, 255, 0.08);
   transition: all 0.3s ease;
   cursor: pointer;
+  min-height: 13rem;
 }
 
 .card-top {
@@ -56,13 +59,13 @@
   align-items: center;
   justify-content: space-between;
   display: flex;
-
+  gap: 0.6rem;
 }
 
 .card-top div {
   color: oklch(0.999994 0.0000455678 0.0000200868 / 0.4);
   font-weight: 200;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .card-title {
@@ -70,33 +73,35 @@
   font-family: 'Syne', sans-serif;
   width: 100%;
   text-transform: uppercase;
+  font-size: clamp(1.15rem, 1.5vw, 1.45rem);
+  letter-spacing: 0.03em;
 }
 
 .card-bottom span {
   color: oklch(0.999994 0.0000455678 0.0000200868 / 0.4);
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .technologies {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 0.75rem;
 }
 
 .technologies span {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 4px 12px;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 999px;
   border: 0.6px solid rgba(255, 255, 255, 0.08);
   color: #9ca3af;
   font-weight: 300;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.08em;
   transition: all 0.3s ease;
-  font-size: 11px;
+  font-size: 0.6875rem;
   text-transform: uppercase;
 }
 
@@ -105,28 +110,34 @@
   align-items: center;
   justify-content: space-between;
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
 }
 
 .buttons-card {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 0.7rem;
+  flex-wrap: wrap;
 }
 
 .buttons-card div {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 9999px;
-  border: 0.6px solid rgba(255, 255, 255, 0.08);
-  padding: 10px;
+  border: 0.8px solid rgba(255, 255, 255, 0.08);
+  padding: 0.8rem;
+  min-width: 2.2rem;
+  min-height: 2.2rem;
   color: #9ca3af;
   transition: all 0.3s ease;
+  touch-action: manipulation;
 }
 
 .arrowup svg {
-  height: 16px;
-  width: 16px;
+  height: 1rem;
+  width: 1rem;
 }
 
 
@@ -201,4 +212,75 @@
 
 .projects-intro-section p.light {
   color: #344060;
+}
+
+@media (max-width: 1200px) {
+  .projects-page {
+    margin: 0 4vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .projects-page {
+    padding: clamp(1.25rem, 3vw, 2rem);
+  }
+
+  .projects-intro-section h1 {
+    font-size: clamp(2.2rem, 4vw, 2.8rem);
+  }
+}
+
+/*Media Queries*/
+
+@media (max-width: 768px) {
+  .projects-page {
+    margin: 1rem auto;
+    padding: 1.5rem;
+  }
+
+  .projects-main-section {
+    grid-template-columns: 1fr;
+  }
+
+  .card-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card-bottom {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+
+  .buttons-card {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 560px) {
+  .projects-page {
+    padding: 1rem;
+  }
+
+  .projects-intro-section h1 {
+    font-size: clamp(1.9rem, 6vw, 2.4rem);
+  }
+
+  .projects-intro-section p {
+    font-size: 0.95rem;
+  }
+
+  .card-project {
+    padding: 1rem;
+  }
+
+  .technologies {
+    gap: 0.5rem;
+  }
+
+  .technologies span {
+    padding: 0.45rem 0.85rem;
+    font-size: clamp(0.65rem, 1vw, 0.75rem);
+  }
 }

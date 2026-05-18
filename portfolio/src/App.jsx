@@ -23,10 +23,9 @@ function AppLayout() {
         <Route path="/about" element={<About />} />
         <Route path="/contacts" element={<Contacts />} />
         {/* <Route path="/education" element={<Education />} /> */}
-        <Route path="/projects" element={<Projects />}>
-          <Route path="portfolio" element={<Portfolio />} />
-          <Route path="landingpage" element={<LandingPage />} />
-        </Route>
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/projects/portfolio" element={<Portfolio />} />
+        <Route path="/projects/landingpage" element={<LandingPage />} />
       </Routes>
       {localpath.pathname !== '/' ? '' : <Footer />}
     </>

@@ -4,12 +4,10 @@ import { MdDarkMode, MdLightMode, MdOutlineDownload } from 'react-icons/md'
 import { ThemeContext } from '../../context/ThemeContext.jsx'
 import { useState } from 'react'
 import { ArrowLeft, Menu, X } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
 
 export default function Header() {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const [isOpen, setisOpen] = useState(false);
-  const navigate = useNavigate();
 
   const toggleSidebar = () => {
     setisOpen(!isOpen)
@@ -42,7 +40,7 @@ export default function Header() {
         </div>
       </nav>
       <nav className={`Secondary-Header ${theme}`}>
-        <button onClick={() => navigate(-1)} className={`go-Back ${theme}`}>
+        <button onClick={() => window.location.href = '/'} className={`go-Back ${theme}`}>
           <div className={`span-arrow`}><ArrowLeft /></div>
           <div className="span-goBack">
             <span style={{ color: '#6B9EFF' }}>{'<'}</span>Joao<span style={{ color: '#6B9EFF' }}>{'./>'}</span>
