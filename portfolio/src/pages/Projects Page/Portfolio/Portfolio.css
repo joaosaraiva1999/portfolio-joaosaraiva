@@ -11,6 +11,36 @@
   transition: all ease-in 0.3ms;
 }
 
+.portfolio-intro-section {
+  width: 100%;
+  margin-bottom: clamp(1.5rem, 3vw, 4rem);
+  max-width: 100%;
+}
+
+.Speciality-year-section {
+  color: oklch(0.999994 0.0000455678 0.0000200868 / 0.4);
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.portfolio-intro-section h1 {
+  font-size: clamp(2.5rem, 3vw, 3rem);
+  color: #ffff;
+  font-family: 'Syne', sans-serif;
+  margin-bottom: 1rem;
+  width: 100%;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+}
+
+.portfolio-intro-section p {
+  font-size: 1.125rem;
+  color: rgb(102, 108, 115);
+  max-width: 58ch;
+  line-height: 1.75;
+}
+
 .close-btn {
   display: inline-flex;
   align-items: center;
