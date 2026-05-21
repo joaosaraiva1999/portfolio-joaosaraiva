@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --spacing-sub-page: 0 337px 0 337px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background:
+    radial-gradient(ellipse at top left, rgba(107, 158, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(107, 158, 255, 0.05) 0%, transparent 50%),
+    #1a1a1a;
+  min-height: 100vh;
+  color: #333;
+  margin: 20px;
+}
+
+html[data-theme="light"] body {
+  color: #1e2640;
+  border-radius: 11px !important;
+  overflow-x: hidden;
+  background: linear-gradient(to bottom right, #b8bfd4, #c2c9de, #bcc4d8);
+}
