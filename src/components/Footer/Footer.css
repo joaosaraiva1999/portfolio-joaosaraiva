@@ -9,7 +9,7 @@
       rgba(255, 255, 255, 0.04) 100%);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 0.6px solid rgba(255, 255, 255, 0.08);
+  border: 0.3px solid rgba(255, 255, 255, 0.08);
   border-radius: 0 0 12px 12px;
   transition: background-color 0.3s ease;
 }
