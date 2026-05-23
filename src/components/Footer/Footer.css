@@ -186,9 +186,7 @@
 .footer.light {
   background: rgba(205, 211, 230, 0.80);
   transition: background-color 0.3s ease;
-  box-shadow:
-    0 20px 25px -5px rgba(0, 0, 0, 0.2),
-    0 8px 10px -6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .First_Footer_Section.light {
