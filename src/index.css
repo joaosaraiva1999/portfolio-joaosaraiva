@@ -27,3 +27,12 @@ html[data-theme="light"] body {
   overflow-x: hidden;
   background: linear-gradient(to bottom right, #b8bfd4, #c2c9de, #bcc4d8);
 }
+
+
+.app-wrapper {
+  border-radius: 11px;
+}
+
+.app-wrapper.light {
+  border-radius: 11px;
+}

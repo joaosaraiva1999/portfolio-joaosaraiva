@@ -8,30 +8,28 @@ import Contacts from './pages/Contacts/Contacts.jsx'
 import Projects from './pages/Projects Page/Projects.jsx'
 import Portfolio from './pages/Projects Page/Portfolio/Portfolio.jsx'
 import LandingPage from './pages/Projects Page/Landing Page/Landingpage.jsx'
-import { ThemeProvider } from './context/ThemeContext.jsx' // For theme management
+import { ThemeProvider, useTheme } from './context/ThemeContext.jsx'
 import { useLocation } from 'react-router-dom';
 
 function AppLayout() {
-
   const localpath = useLocation();
+  const { theme } = useTheme();
 
   return (
-    <>
+    <div className={`app-wrapper ${theme === 'light' ? 'light' : ''}`}>
       {localpath.pathname !== '/' ? <SecondaryHeader /> : <Header />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contacts" element={<Contacts />} />
-        {/* <Route path="/education" element={<Education />} /> */}
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/portfolio" element={<Portfolio />} />
         <Route path="/projects/landingpage" element={<LandingPage />} />
       </Routes>
       {localpath.pathname !== '/' ? '' : <Footer />}
-    </>
+    </div>
   )
 }
-
 
 function App() {
   return (
