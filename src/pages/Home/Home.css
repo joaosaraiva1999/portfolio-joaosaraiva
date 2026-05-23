@@ -349,9 +349,8 @@
 
 
 .home-page.light {
-  box-shadow:
-    0 20px 25px -5px rgba(0, 0, 0, 0.2),
-    0 8px 10px -6px rgba(0, 0, 0, 0.2);
+  box-shadow: -8px 0 25px -5px rgba(0, 0, 0, 0.08), 8px 0 10px -6px rgba(0, 0, 0, 0.08);
+  clip-path: inset(0px -20px 0px -20px);
 }
 
 .hero_skills.light {
