@@ -17,7 +17,7 @@ export default function Projects() {
         <p className={theme}>A collection of projects that showcase my approach to development—clean architecture, modern stacks, and user-focused design.</p>
       </section>
       <section className={`projects-main-section`}>
-        {projects.map(({ id, speciality, Year, title, technologies, href }) => (
+        {projects.map(({ id, speciality, Year, title, technologies, href, githref }) => (
           <div key={id} className={`card-project ${theme}`} onClick={() => window.location.href = href}>
             <div className={`card-top ${theme}`}> <div className={`special ${theme}`}>{speciality}</div> <div className={`year ${theme}`}>{Year}</div></div>
             <h3 className={`card-title ${theme}`}>{title}</h3>
@@ -30,7 +30,7 @@ export default function Projects() {
               <span className={theme}>VIEW PROJECT</span>
               <div className='buttons-card'>
                 <div className={`arrowup ${theme}`}><ArrowUpRight aria-hidden="true" /></div>
-                <div className={`github ${theme}`}><FaGithub aria-hidden="true" /></div>
+                <div className={`github ${theme}`} onClick={() => window.open(githref, "_blank", "noopener,noreferrer")} ><FaGithub aria-hidden="true" /></div>
               </div>
             </div>
           </div>

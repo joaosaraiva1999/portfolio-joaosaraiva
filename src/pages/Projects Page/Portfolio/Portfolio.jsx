@@ -5,7 +5,8 @@ import { X, ArrowUpRight } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
 import { projects } from '../../../data/Projects.js';
 import { FaGithub } from "react-icons/fa";
-import portfolioimg from "../../../assets/photo-1759661966728-4a02e3c6ed91.jpg"
+import portfolioimg from "../../../assets/portfolioimg.png"
+import portfolioimglight from "../../../assets/portfolioimglight.png"
 
 export default function Portfolio() {
 
@@ -18,7 +19,7 @@ export default function Portfolio() {
       <section className={`button-close-section`}>
         <button onClick={() => navigate(-1)} className={`close-btn ${theme}`}><X />Close</button>
       </section>
-      <section className={`Speciality-year-section`}><span>{Project_Object.speciality}</span><span> — </span><span>{Project_Object.Year}</span></section>
+      <section className={`Speciality-year-section ${theme} `}><span>{Project_Object.speciality}</span><span> — </span><span>{Project_Object.Year}</span></section>
       <section className={`portfolio-intro-section ${theme}`}>
         <h1 className={theme}>Portfolio</h1>
         <p className={theme}>Personal portfolio website with dark glassmorphism aesthetic, light/dark mode, and responsive design built with React and Tailwind.</p>
@@ -53,33 +54,33 @@ export default function Portfolio() {
         </div>
         <div className={`highlights ${theme}`}>
           <h4 className={`highlights-title ${theme}`}>HIGHLIGHTS</h4>
-          <p className={`highlights-info ${theme}`}>
+          <div className={`highlights-info ${theme}`}>
             <ul>
               {Project_Object.highlights.map((high) => (
-                <li key={high}>{high}</li>
+                <li className={theme} key={high}>{high}</li>
               ))}
             </ul>
-          </p>
+          </div>
         </div>
       </section>
       <section className="redirect-buttons">
-        <button className={`visit-website ${theme}`}>
+        <button className={`visit-website ${theme}`} onClick={() => window.location.href = '/'}>
           <div className={`visit-div ${theme}`}>
             <p className={`visit-title ${theme}`} >LIVE PROJECT</p>
             <p className={`visit-text ${theme}`} >Visit Website</p>
           </div>
-          <div className={`svg-div ${theme}`}><ArrowUpRight /></div>
+          <div className={`svg-div ${theme}`}><ArrowUpRight className={theme} /></div>
         </button>
-        <button className={`visit-sourcecode ${theme}`}>
+        <button className={`visit-sourcecode ${theme}`} onClick={() => window.open(Project_Object.githref, "_blank")}>
           <div className={`visit-div ${theme}`}>
             <p className={`visit-title ${theme}`}>SOURCE CODE</p>
             <p className={`visit-text ${theme}`} >View on Github</p>
           </div>
-          <div className={`svg-div ${theme}`}><FaGithub /></div>
+          <div className={`svg-div ${theme}`}><FaGithub className={theme} /></div>
         </button>
       </section>
       <section className='Image-section'>
-        <img src={portfolioimg} alt="Portfolio Image" />
+        <img src={theme === 'light' ? portfolioimglight : portfolioimg} alt="Portfolio Image" />
       </section>
     </main >
   )

@@ -1,4 +1,4 @@
-import './Landingpage.css'
+import '../Portfolio/Portfolio.css'
 import { useContext } from 'react'
 import { ThemeContext } from '../../../context/ThemeContext.jsx'
 import { X, ArrowUpRight } from "lucide-react";
@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { projects } from '../../../data/Projects.js';
 import { FaGithub } from "react-icons/fa";
 import landpageimg from "../../../assets/REACTLAND.png"
+import landpagelightimg from "../../../assets/REACTLANDLIGHT.png"
 
 export default function Portfolio() {
 
@@ -18,7 +19,7 @@ export default function Portfolio() {
       <section className={`button-close-section`}>
         <button onClick={() => navigate(-1)} className={`close-btn ${theme}`}><X />Close</button>
       </section>
-      <section className={`Speciality-year-section`}><span>{Project_Object.speciality}</span><span> — </span><span>{Project_Object.Year}</span></section>
+      <section className={`Speciality-year-section ${theme}`}><span>{Project_Object.speciality}</span><span> — </span><span>{Project_Object.Year}</span></section>
       <section className={`portfolio-intro-section ${theme}`}>
         <h1 className={theme}>REACT LANDING PAGE</h1>
         <p className={theme}>Horror-themed landing page with dark/light mode, scroll-reveal animations, and atmospheric glitch effects built with React and CSS.</p>
@@ -56,30 +57,30 @@ export default function Portfolio() {
           <p className={`highlights-info ${theme}`}>
             <ul>
               {Project_Object.highlights.map((high) => (
-                <li key={high}>{high}</li>
+                <li className={theme} key={high}>{high}</li>
               ))}
             </ul>
           </p>
         </div>
       </section>
       <section className="redirect-buttons">
-        <button className={`visit-website ${theme}`}>
+        <button className={`visit-website ${theme}`} onClick={() => window.open(Project_Object.sitehref, "_blank", "noopener,noreferrer")}>
           <div className={`visit-div ${theme}`}>
             <p className={`visit-title ${theme}`} >LIVE PROJECT</p>
             <p className={`visit-text ${theme}`} >Visit Website</p>
           </div>
-          <div className={`svg-div ${theme}`}><ArrowUpRight /></div>
+          <div className={`svg-div ${theme}`}><ArrowUpRight className={theme} /></div>
         </button>
-        <button className={`visit-sourcecode ${theme}`}>
+        <button className={`visit-sourcecode ${theme}`} onClick={() => window.open(Project_Object.githref, "_blank", "noopener,noreferrer")} >
           <div className={`visit-div ${theme}`}>
             <p className={`visit-title ${theme}`}>SOURCE CODE</p>
             <p className={`visit-text ${theme}`} >View on Github</p>
           </div>
-          <div className={`svg-div ${theme}`}><FaGithub /></div>
+          <div className={`svg-div ${theme}`}><FaGithub className={theme} /></div>
         </button>
       </section>
       <section className='Image-section'>
-        <img src={landpageimg} alt="Portfolio Image" />
+        <img src={theme === 'light' ? landpagelightimg : landpageimg} alt="Portfolio Image" />
       </section>
     </main >
   )
