@@ -5,8 +5,8 @@ import { X, ArrowUpRight } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
 import { projects } from '../../../data/Projects.js';
 import { FaGithub } from "react-icons/fa";
-import portfolioimg from "../../../assets/portfolioimg.png"
-import portfolioimglight from "../../../assets/portfolioimglight.png"
+import portfolioimg from "../../../assets/portfolioimg.webp"
+import portfolioimglight from "../../../assets/portfolioimglight.webp"
 
 export default function Portfolio() {
 
@@ -80,7 +80,7 @@ export default function Portfolio() {
         </button>
       </section>
       <section className='Image-section'>
-        <img src={theme === 'light' ? portfolioimglight : portfolioimg} alt="Portfolio Image" />
+        <img src={theme === 'light' ? portfolioimglight : portfolioimg} alt="Portfolio Website Screenshot" width={1200} height={800} loading="lazy" />
       </section>
     </main >
   )

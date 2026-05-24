@@ -5,8 +5,8 @@ import { X, ArrowUpRight } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
 import { projects } from '../../../data/Projects.js';
 import { FaGithub } from "react-icons/fa";
-import landpageimg from "../../../assets/REACTLAND.png"
-import landpagelightimg from "../../../assets/REACTLANDLIGHT.png"
+import landpageimg from "../../../assets/REACTLAND.webp"
+import landpagelightimg from "../../../assets/REACTLANDLIGHT.webp"
 
 export default function Portfolio() {
 
@@ -80,7 +80,7 @@ export default function Portfolio() {
         </button>
       </section>
       <section className='Image-section'>
-        <img src={theme === 'light' ? landpagelightimg : landpageimg} alt="Portfolio Image" />
+        <img src={theme === 'light' ? landpagelightimg : landpageimg} alt="React Landing Page Screenshot" width={1200} height={800} loading="lazy" />
       </section>
     </main >
   )

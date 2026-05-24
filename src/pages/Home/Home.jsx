@@ -1,7 +1,7 @@
 import './Home.css'
 import { useContext } from 'react'
 import { ThemeContext } from '../../context/ThemeContext.jsx'
-import profile_pic from '../../assets/portfolio-pic.jpg'
+import profile_pic from '../../assets/portfolio-pic.webp'
 import { MdOutlineDownload } from 'react-icons/md'
 import { skills } from '../../data/Skills.js'
 import { quicknav } from '../../data/Quicknav.js'
@@ -14,7 +14,7 @@ export default function Home() {
       <section className={`hero ${theme}`}>
         <section className={`hero_profile ${theme}`}>
           <div className={`hero_img ${theme}`}>
-            <img src={profile_pic} alt="Profile Picture" />
+            <img src={profile_pic} alt="Profile Picture" width={400} height={400} loading="eager" />
           </div>
           <div className={`hero-work-status ${theme}`}>
             <span className={`dot ${theme}`}></span>
