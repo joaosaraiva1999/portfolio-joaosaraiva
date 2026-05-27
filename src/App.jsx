@@ -7,12 +7,12 @@ import Home from './pages/Home/Home.jsx'
 import { ThemeProvider, useTheme } from './context/ThemeContext.jsx'
 import { useLocation } from 'react-router-dom';
 
-// Lazy-load non-home pages so their code + images are fetched on demand
 const About = lazy(() => import('./pages/About/About.jsx'))
 const Contacts = lazy(() => import('./pages/Contacts/Contacts.jsx'))
 const Projects = lazy(() => import('./pages/Projects Page/Projects.jsx'))
 const Portfolio = lazy(() => import('./pages/Projects Page/Portfolio/Portfolio.jsx'))
 const LandingPage = lazy(() => import('./pages/Projects Page/Landing Page/Landingpage.jsx'))
+const Education = lazy(() => import('./pages/Education/Education.jsx'))
 
 function AppLayout() {
   const localpath = useLocation();
@@ -26,6 +26,7 @@ function AppLayout() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contacts" element={<Contacts />} />
+          <Route path="/education" element={<Education />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/portfolio" element={<Portfolio />} />
           <Route path="/projects/landingpage" element={<LandingPage />} />

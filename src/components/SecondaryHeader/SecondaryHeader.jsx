@@ -20,10 +20,10 @@ export default function Header() {
           <button className={`sidebar_close ${theme}`} onClick={toggleSidebar} type="button" aria-label="Toggle navigation menu"><X className={`sidebar_close-icon ${theme}`} /></button>
         </div>
         <div className={`sidebar_links ${theme}`}>
-          <a className={theme} href="#projects">Projects</a>
-          <a className={theme} href="#about">About</a>
-          <a className={theme} href="#education">Education</a>
-          <a className={theme} href="#contact">Contact</a>
+          <a className={theme} href="/projects" onClick={() => setisOpen(false)}>Projects</a>
+          <a className={theme} href="/about" onClick={() => setisOpen(false)}>About</a>
+          <a className={theme} href="/education" onClick={() => setisOpen(false)}>Education</a>
+          <a className={theme} href="/contacts" onClick={() => setisOpen(false)}>Contact</a>
         </div>
 
         <div className={`sidebar_theme ${theme}`}>
