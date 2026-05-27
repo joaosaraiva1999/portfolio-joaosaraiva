@@ -130,6 +130,8 @@
   background-color: #1a1a1a;
   z-index: 999;
   position: fixed;
+  top: 0;
+  right: 0;
   border-radius: 12px 0 0 0;
 
 }
@@ -397,4 +399,19 @@
 
 
 
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0 1rem;
+  }
+
+  .resume {
+    display: none;
+  }
+
+  .sidebar.open {
+    width: 100%;
+    border-radius: 0;
+  }
 }

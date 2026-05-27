@@ -1,7 +1,8 @@
 .footer {
   max-width: 100%;
   width: 100%;
-  height: 268px;
+  height: auto;
+  min-height: 268px;
   display: flex;
   flex-direction: column;
   background: linear-gradient(315deg,
@@ -60,9 +61,10 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 212px;
+  height: auto;
+  min-height: 212px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.10);
-  padding: 40px 56px 40px 56px;
+  padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 4vw, 3.5rem);
 }
 
 .Secondary_Footer {
@@ -71,7 +73,7 @@
   align-items: center;
   width: 100%;
   height: 56px;
-  padding: 16px 56px 16px 56px;
+  padding: 16px clamp(1.5rem, 4vw, 3.5rem);
 }
 
 .Secondary_Footer span {
@@ -263,5 +265,30 @@
   .footer,
   .Main_Footer {
     height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .Main_Footer {
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .Secondary_Footer {
+    padding: 1rem;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .Secondary_Footer span {
+    font-size: 11px;
+  }
+
+  .Footer_Roles span {
+    font-size: 13px;
+  }
+
+  .Footer_Quote {
+    font-size: 11px;
   }
 }

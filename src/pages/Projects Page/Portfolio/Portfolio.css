@@ -3,7 +3,7 @@
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 1rem;
-  margin: 0 337px;
+  margin: var(--spacing-sub-page);
   padding: clamp(1.5rem, 2.5vw, 3rem);
   gap: clamp(1.5rem, 2vw, 2.5rem);
   transition: all ease-in 0.3ms;
@@ -379,3 +379,80 @@
 }
 
 /*Media Queries*/
+
+@media (max-width: 768px) {
+  .project-details-section {
+    flex-wrap: wrap;
+  }
+
+  .detail-section {
+    width: 50%;
+  }
+
+  .overview-section {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .overview,
+  .highlights {
+    width: 100%;
+  }
+
+  .redirect-buttons {
+    flex-direction: column;
+  }
+
+  .visit-website,
+  .visit-sourcecode {
+    width: 100%;
+  }
+
+  .portfolio-intro-section h1 {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+  }
+
+  .portfolio-intro-section p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .detail-section {
+    width: 100%;
+  }
+
+  .project-details-section {
+    gap: 16px;
+    padding: 24px 0;
+  }
+
+  .close-btn {
+    margin-bottom: 24px;
+  }
+
+  .portfolio-intro-section {
+    margin-bottom: 24px;
+  }
+
+  .Technologies-Section {
+    margin-bottom: 24px;
+  }
+
+  .overview-section {
+    margin-bottom: 24px;
+    gap: 1.5rem;
+  }
+
+  .redirect-buttons {
+    margin-bottom: 24px;
+  }
+
+  .Image-section {
+    border-radius: 12px;
+  }
+
+  .Image-section img {
+    border-radius: 12px;
+  }
+}

@@ -30,10 +30,10 @@ export default function Footer() {
             <span className={theme}>NAVIGATION</span>
           </div>
           <div className={`Second_Links_Footer_Section ${theme}`}>
-            <a className={theme} href="#projects">Projects</a>
-            <a className={theme} href="#about">About</a>
-            <a className={theme} href="#education">Education</a>
-            <a className={theme} href="#contact">Contact</a>
+            <a className={theme} href="/projects">Projects</a>
+            <a className={theme} href="/about">About</a>
+            <a className={theme} href="/education">Education</a>
+            <a className={theme} href="/contacts">Contact</a>
           </div>
         </div>
         <div className={`Third_Footer_Section ${theme}`}>
@@ -51,7 +51,7 @@ export default function Footer() {
       </section>
       <section className={`Secondary_Footer ${theme}`}>
         <span className={theme}>© 2026 João Saraiva. All rights reserved.</span>
-        <span className={theme}>Designed & Developed by <a href="#about" className={theme}>João Saraiva</a></span>
+        <span className={theme}>Designed & Developed by <a href="/about" className={theme}>João Saraiva</a></span>
       </section>
     </footer>
   )

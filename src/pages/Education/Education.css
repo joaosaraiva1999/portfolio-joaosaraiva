@@ -3,7 +3,7 @@
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 1rem;
-  margin: 0 337px;
+  margin: var(--spacing-sub-page);
   padding: clamp(1.5rem, 2.5vw, 3rem);
   transition: all ease-in 0.3ms;
 }
