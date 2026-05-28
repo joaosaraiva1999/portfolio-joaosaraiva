@@ -2,6 +2,7 @@
 
 :root {
   --spacing-sub-page: 0 337px 0 337px;
+  --app-margin: clamp(8px, 2vw, 20px);
 }
 
 html {
@@ -22,19 +23,23 @@ body {
     #1a1a1a;
   min-height: 100vh;
   color: #333;
-  margin: clamp(8px, 2vw, 20px);
+  margin: 0;
   overflow-x: hidden;
 }
 
 html[data-theme="light"] body {
   color: #1e2640;
-  border-radius: 11px !important;
+  border-radius: 0 !important;
   overflow-x: hidden;
   background: linear-gradient(to bottom right, #b8bfd4, #c2c9de, #bcc4d8);
 }
 
 
 .app-wrapper {
+  margin: var(--app-margin);
+  min-height: calc(100vh - 2 * var(--app-margin));
+  display: flex;
+  flex-direction: column;
   border-radius: 11px;
 }
 
