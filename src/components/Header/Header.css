@@ -46,10 +46,7 @@
   letter-spacing: 0.05em;
   border-radius: 9999px;
   overflow: hidden;
-  transition:
-    background-color 300ms ease,
-    border-color 300ms ease,
-    color 300ms ease;
+  transition: all 300ms;
   color: white;
   cursor: pointer;
 }
@@ -118,7 +115,8 @@
   transition:
     border-color 0.3s ease,
     color 0.3s ease,
-    background-color 0.3s ease;
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .theme-icon {
@@ -145,10 +143,7 @@
 .sidebar-toggle {
   display: none;
   cursor: pointer;
-  transition:
-    background-color 0.3s ease,
-    border-color 0.3s ease,
-    color 0.3s ease;
+  transition: all 0.3s ease;
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -252,10 +247,7 @@
   justify-content: center;
   font-size: 16px;
   cursor: pointer;
-  transition:
-    background-color 0.3s ease,
-    border-color 0.3s ease,
-    color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .sidebar_close-icon {
@@ -274,7 +266,7 @@
   justify-content: end;
   padding: 16px;
   margin-bottom: 16px;
-  transition: opacity 300ms ease;
+  transition: all 300ms;
 }
 
 .sidebar_line {
@@ -293,10 +285,7 @@
   border-radius: 12px;
   border-width: 1px;
   border-style: solid;
-  transition:
-    background-color 300ms ease,
-    border-color 300ms ease,
-    color 300ms ease;
+  transition: all 300ms;
   background-color: rgba(255, 255, 255, 0.05);
   border-color: rgba(255, 255, 255, 0.10);
   color: rgba(255, 255, 255, 0.60);
