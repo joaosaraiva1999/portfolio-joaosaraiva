@@ -4,10 +4,12 @@ import { m } from 'motion/react'
 import { GraduationCap } from 'lucide-react'
 import { ThemeContext } from '../../context/ThemeContext.jsx'
 import { itemVariants, pageVariants, staggerContainer } from '../../utils/motion.js'
+import { EducationObj } from '../../data/Educationobj.js'
 
 const MotionDiv = m.div
 const MotionMain = m.main
 const MotionSection = m.section
+const MotionH2 = m.h2
 
 export default function Education() {
   const { theme } = useContext(ThemeContext)
@@ -22,6 +24,14 @@ export default function Education() {
           <div className={`education-title-first ${theme}`}>Education & Skills</div>
           <div className={`education-title-last ${theme}`}>My academic background and technical toolkit</div>
         </MotionDiv>
+      </MotionSection>
+      <MotionSection className={`education-card-section ${theme}`}>
+        <MotionDiv className={`education-card-label ${theme}`}>
+          <MotionH2>Education</MotionH2>
+        </MotionDiv>
+        {EducationObj.map(({ id, Title, institute, date, description }) => (
+          <MotionDiv key={id} className={`education-card ${theme}`} variants={itemVariants}></MotionDiv>
+        ))}
       </MotionSection>
     </MotionMain>
   )
