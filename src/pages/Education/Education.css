@@ -8,6 +8,45 @@
   transition: all ease-in 0.3ms;
 }
 
+.education-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  width: 100%;
+  margin-bottom: 64px;
+}
+
+.icon-grad {
+  width: 48px;
+  height: 48px;
+  border-radius: 15px;
+  border: 1px solid rgb(107 158 255 / 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6B9EFF;
+  background-color: rgba(107, 158, 255, 0.1);
+}
+
+.education-title {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+
+.education-title-first {
+  font-size: 36px;
+  color: #ffff;
+  font-family: 'Syne', sans-serif;
+}
+
+.education-title-last {
+  font-size: 16px;
+  color: oklab(0.999994 0.0000455678 0.0000200868 / 0.4);
+}
+
 /*Hover Transitions*/
 
 /*Theme Transitions*/
@@ -17,4 +56,5 @@
     0 20px 25px -5px rgba(0, 0, 0, 0.2),
     0 8px 10px -6px rgba(0, 0, 0, 0.2);
   transition: all ease-in 0.3ms;
+  background-color: rgb(221 226 240 / 0.8);
 }

@@ -1,12 +1,13 @@
-import { createContext, useState, useEffect, useContext } from 'react'
+/* eslint-disable react-refresh/only-export-components */
+import { createContext, useContext, useEffect, useState } from 'react'
 
-export const ThemeContext = createContext()
+export const ThemeContext = createContext({
+  theme: 'light',
+  toggleTheme: () => {},
+})
 
 export function ThemeProvider({ children }) {
-
-  const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('theme') ?? 'light'
-  })
+  const [theme, setTheme] = useState(() => localStorage.getItem('theme') ?? 'light')
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme
@@ -27,3 +28,4 @@ export function ThemeProvider({ children }) {
 export function useTheme() {
   return useContext(ThemeContext)
 }
+

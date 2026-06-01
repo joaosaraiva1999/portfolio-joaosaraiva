@@ -27,19 +27,22 @@
 .buttons {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
 }
 
 .resume {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   background-color: rgba(107, 158, 255, 0.2);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(107, 158, 255, 0.4);
-  padding: 0.625rem 1.25rem;
+  min-height: 42px;
+  padding: 0 1.25rem;
   font-size: 0.875rem;
+  font-weight: 700;
   letter-spacing: 0.05em;
   border-radius: 9999px;
   overflow: hidden;
@@ -70,6 +73,8 @@
 }
 
 .links a {
+  position: relative;
+  display: inline-flex;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -80,25 +85,59 @@
   cursor: pointer;
 }
 
+.links a span:first-child {
+  display: inline-block;
+}
+
+.nav-active-indicator {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 1px;
+  border-radius: 999px;
+  background-color: #6B9EFF;
+}
+
 .theme {
-  width: 32px;
-  height: 32px;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
   border-radius: 50%;
-  color: white;
+  color: rgba(255, 255, 255, 0.62);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  border: 0.6px solid rgba(255, 255, 255, 0.10);
-  transition: border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background-color: rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.theme-icon {
+  width: 18px;
+  height: 18px;
+  stroke-width: 1.8;
 }
 
 .theme.light {
-  background-color: rgba(255, 255, 255, 0.12);
+  color: #2d3a5c;
+  background-color: rgba(30, 38, 64, 0.08);
+  border-color: rgba(30, 38, 64, 0.18);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    0 4px 10px rgba(30, 38, 64, 0.08);
 }
 
 .theme.dark {
-  background-color: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.65);
+  background-color: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.14);
 }
 
 .sidebar-toggle {
@@ -121,6 +160,21 @@
   height: 20px;
 }
 
+.sidebar-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 998;
+  border: 0;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.58);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.sidebar-backdrop.light {
+  background-color: rgba(20, 27, 45, 0.38);
+}
+
 .sidebar {
   width: 0;
   height: 100%;
@@ -133,6 +187,7 @@
   top: 0;
   right: 0;
   border-radius: 12px 0 0 0;
+  will-change: transform, opacity;
 
 }
 
@@ -141,6 +196,10 @@
   flex-direction: column;
   gap: 3px;
   padding: 32px 24px 32px 24px;
+}
+
+.sidebar_links>div {
+  width: 100%;
 }
 
 .sidebar a {
@@ -272,6 +331,7 @@
 .theme:hover {
   color: #6B9EFF;
   border-color: #6B9EFF;
+  background-color: rgba(107, 158, 255, 0.12);
 }
 
 .resume:hover {
@@ -341,19 +401,10 @@
   color: #2d3a5c;
 }
 
-.theme.light {
-  background-color: rgba(255, 255, 255, 0.12);
-  transition: background-color 0.3s ease;
-  color: #1e2640;
-}
-
-.theme.dark {
-  background-color: rgba(255, 255, 255, 0.05);
-  transition: background-color 0.3s ease;
-}
-
 .theme.light:hover {
   color: #6B9EFF;
+  background-color: rgba(107, 158, 255, 0.16);
+  border-color: rgba(107, 158, 255, 0.55);
 }
 
 .header.light {
@@ -377,6 +428,8 @@
 
 .resume.light {
   color: #6B9EFF;
+  background-color: rgba(107, 158, 255, 0.20);
+  border-color: rgba(107, 158, 255, 0.42);
 }
 
 .sidebar.light {
@@ -411,7 +464,7 @@
   }
 
   .sidebar.open {
-    width: 100%;
-    border-radius: 0;
+    width: min(82vw, 320px);
+    border-radius: 12px 0 0 12px;
   }
 }

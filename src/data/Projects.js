@@ -1,5 +1,3 @@
-import { href } from "react-router-dom";
-
 export const projects = [
   {
     id: 1,

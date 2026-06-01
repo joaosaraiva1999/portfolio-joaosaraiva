@@ -246,28 +246,24 @@
 }
 
 .visit-sourcecode:hover {
-  transform: translateY(-2px);
   box-shadow: 0 10px 15px -3px rgba(107, 158, 255, 0.10);
   border-color: rgba(107, 158, 255, 0.30);
   background-color: rgba(107, 158, 255, 0.05);
 }
 
 .visit-website:hover {
-  transform: translateY(-2px);
   box-shadow: 0 10px 15px -3px rgba(107, 158, 255, 0.10);
   border-color: rgba(107, 158, 255, 0.30);
   background-color: rgba(107, 158, 255, 0.05);
 }
 
 .visit-sourcecode.light:hover {
-  transform: translateY(-2px);
   box-shadow: 0 10px 15px -3px rgba(107, 158, 255, 0.10);
   border-color: rgba(107, 158, 255, 0.30);
   background-color: rgba(107, 158, 255, 0.05);
 }
 
 .visit-website.light:hover {
-  transform: translateY(-2px);
   box-shadow: 0 10px 15px -3px rgba(107, 158, 255, 0.10);
   border-color: rgba(107, 158, 255, 0.30);
   background-color: rgba(107, 158, 255, 0.05);

@@ -1,66 +1,87 @@
 import './Home.css'
-import { useContext } from 'react'
+import { createElement, useContext } from 'react'
+import { m, useReducedMotion } from 'motion/react'
+import { Download } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 import { ThemeContext } from '../../context/ThemeContext.jsx'
-import profile_pic from '../../assets/portfolio-pic.webp'
-import { MdOutlineDownload } from 'react-icons/md'
+import profile_pic from '../../assets/portfolio-pic-320.webp'
 import { skills } from '../../data/Skills.js'
 import { quicknav } from '../../data/Quicknav.js'
+import { buttonHover, buttonTap, cardHover, itemVariants, pageVariants, sectionVariants, staggerContainer, viewport } from '../../utils/motion.js'
+
+const MotionDiv = m.div
+const MotionH3 = m.h3
+const MotionMain = m.main
+const MotionSection = m.section
+const MotionSpan = m.span
+const MotionButton = m.button
 
 export default function Home() {
-  const { theme, toggleTheme } = useContext(ThemeContext)
+  const { theme } = useContext(ThemeContext)
+  const shouldReduceMotion = useReducedMotion()
+  const navigate = useNavigate()
 
   return (
-    <main className={`home-page ${theme}`}>
+    <MotionMain className={`home-page ${theme}`} variants={pageVariants} initial="hidden" animate="show" exit="exit">
       <section className={`hero ${theme}`}>
-        <section className={`hero_profile ${theme}`}>
-          <div className={`hero_img ${theme}`}>
-            <img src={profile_pic} alt="Profile Picture" width={400} height={400} loading="eager" />
-          </div>
-          <div className={`hero-work-status ${theme}`}>
+        <MotionSection className={`hero_profile ${theme}`} variants={staggerContainer} initial="hidden" animate="show">
+          <MotionDiv variants={itemVariants}>
+            <MotionDiv
+              className={`hero_img ${theme}`}
+              whileHover={{ y: -2 }}
+              animate={shouldReduceMotion ? undefined : { y: [0, -4, 0] }}
+              transition={shouldReduceMotion ? undefined : { duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+            >
+              <img src={profile_pic} alt="Profile Picture" width={400} height={400} loading="eager" fetchPriority="high" decoding="async" />
+            </MotionDiv>
+          </MotionDiv>
+          <MotionDiv className={`hero-work-status ${theme}`} variants={itemVariants}>
             <span className={`dot ${theme}`}></span>
             <span className={`work-status-text ${theme}`}>AVAILABLE FOR WORK</span>
-          </div>
-          <div className="profile-name">
-            <h2 className={theme}>João Saraiva</h2>
-          </div>
-          <div className="profile-title">
+          </MotionDiv>
+          <MotionDiv className="profile-name" variants={itemVariants}>
+            <h2 className={theme}>Jo&atilde;o Saraiva</h2>
+          </MotionDiv>
+          <MotionDiv className="profile-title" variants={itemVariants}>
             <p className={theme}>Junior Web Developer</p>
-          </div>
-          <div className="profile-intro">
+          </MotionDiv>
+          <MotionDiv className="profile-intro" variants={itemVariants}>
             <p className={theme}>I'm a Junior Web Developer who enjoys building responsive, user-focused web applications. I work with JavaScript, React, HTML/CSS, ASP.NET, SQL and PHP/Laravel, and I like integrating APIs to connect systems and simplify workflows.</p>
-          </div>
-          <button className={`download-resume ${theme}`}>VIEW RESUME<span style={{ color: '#6B9EFF', paddingTop: '0.2rem' }}><MdOutlineDownload size={18} /></span></button>
-        </section>
+          </MotionDiv>
+          <MotionButton className={`download-resume ${theme}`} variants={itemVariants} whileHover={buttonHover} whileTap={buttonTap}>
+            VIEW RESUME<span style={{ color: '#6B9EFF', paddingTop: '0.2rem' }}><Download size={18} /></span>
+          </MotionButton>
+        </MotionSection>
 
       </section>
-      <section className='skills'>
-        <div className={`hero_skills ${theme}`}>
+      <MotionSection className="skills" variants={sectionVariants} initial="hidden" whileInView="show" viewport={viewport}>
+        <MotionDiv className={`hero_skills ${theme}`} variants={staggerContainer}>
           {skills.map(({ id, icon: Icon, text }) => (
-            <span className={`skills-icon ${theme}`} key={id}>
-              <Icon />
+            <MotionSpan className={`skills-icon ${theme}`} key={id} variants={itemVariants} whileHover={{ y: -2 }}>
+              {createElement(Icon)}
               {text}
-            </span>
+            </MotionSpan>
           ))}
-        </div>
-      </section>
-      <section className='quicknav'>
-        <div className={`quicknav-container ${theme}`}>
-          <h3>QUICK NAVIGATION</h3>
-          <div className={`quicknav-cards ${theme}`}>
+        </MotionDiv>
+      </MotionSection>
+      <MotionSection className="quicknav" variants={sectionVariants} initial="hidden" whileInView="show" viewport={viewport}>
+        <MotionDiv className={`quicknav-container ${theme}`} variants={staggerContainer}>
+          <MotionH3 variants={itemVariants}>QUICK NAVIGATION</MotionH3>
+          <MotionDiv className={`quicknav-cards ${theme}`} variants={staggerContainer}>
             {quicknav.map(({ id, icon: Icon, title, subtitle, href }) => (
-              <div key={id} className={`card ${theme}`} onClick={() => window.location.href = href}>
+              <MotionDiv key={id} className={`card ${theme}`} variants={itemVariants} whileHover={cardHover} whileTap={buttonTap} onClick={() => navigate(href)}>
                 <div className={`card-icon ${theme}`}>
-                  <Icon className={`Icon ${theme}`} />
+                  {createElement(Icon, { className: `Icon ${theme}` })}
                 </div>
                 <div className={`card-content ${theme}`}>
                   <span className={`title ${theme}`}>{title}</span>
                   <span className={`subtitle ${theme}`}>{subtitle}</span>
                 </div>
-              </div>
+              </MotionDiv>
             ))}
-          </div>
-        </div>
-      </section>
-    </main >
+          </MotionDiv>
+        </MotionDiv>
+      </MotionSection>
+    </MotionMain >
   )
 }

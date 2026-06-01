@@ -49,6 +49,16 @@ html[data-theme="light"] body {
 
 /* ── Responsive spacing ── */
 
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 @media (max-width: 1200px) {
   :root {
     --spacing-sub-page: 0 4vw 0 4vw;

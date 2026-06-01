@@ -352,6 +352,7 @@
 .home-page.light {
   box-shadow: -8px 0 25px -5px rgba(0, 0, 0, 0.08), 8px 0 10px -6px rgba(0, 0, 0, 0.08);
   clip-path: inset(0px -20px 0px -20px);
+  background-color: rgb(221 226 240 / 0.8);
 }
 
 .hero_skills.light {
@@ -411,10 +412,6 @@
   border: 2px solid rgba(0, 0, 0, 0.15);
   background: linear-gradient(to bottom right, #ffffff, #e5e7eb);
   backdrop-filter: blur(4px);
-}
-
-.hero.light {
-  backdrop-filter: blur(12px);
 }
 
 /*Keyframes*/
