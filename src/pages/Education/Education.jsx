@@ -8,6 +8,7 @@ import { itemVariants, pageVariants, staggerContainer } from '../../utils/motion
 const MotionDiv = m.div
 const MotionMain = m.main
 const MotionSection = m.section
+const MotionH2 = m.h2
 
 export default function Education() {
   const { theme } = useContext(ThemeContext)
@@ -22,6 +23,12 @@ export default function Education() {
           <div className={`education-title-first ${theme}`}>Education & Skills</div>
           <div className={`education-title-last ${theme}`}>My academic background and technical toolkit</div>
         </MotionDiv>
+      </MotionSection>
+      <MotionSection className={`education-card-section ${theme}`}>
+        <MotionDiv className={`education-card-label ${theme}`}>
+          <MotionH2>Education</MotionH2>
+        </MotionDiv>
+        <MotionDiv className={`education-card ${theme}`}></MotionDiv>
       </MotionSection>
     </MotionMain>
   )

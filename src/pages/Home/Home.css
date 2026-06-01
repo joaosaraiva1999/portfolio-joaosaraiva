@@ -37,13 +37,14 @@
   flex-direction: column;
   gap: 24px;
   cursor: pointer;
-  transition: background 0.15s;
   padding: 32px 28px;
   align-items: center;
   box-shadow:
     0 20px 25px -5px rgba(0, 0, 0, 0.2),
     0 8px 10px -6px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 
 }
 
@@ -59,7 +60,9 @@
   box-shadow:
     0 20px 25px -5px rgba(0, 0, 0, 0.2),
     0 8px 10px -6px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .card-icon svg {
@@ -79,7 +82,7 @@
   font-size: 16px;
   font-weight: 600;
   color: #ffffff;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .card-content span:last-child {
@@ -120,7 +123,10 @@
   font-weight: 400;
   letter-spacing: 2px;
   cursor: default;
-  transition: all 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .skills-icon {
@@ -154,7 +160,7 @@
     0 20px 25px -5px rgba(0, 0, 0, 0.4),
     0 8px 10px -6px rgba(0, 0, 0, 0.4),
     0 0 0 4px rgba(107, 158, 255, 0.10);
-  transition: all 500ms ease;
+  transition: border-color 300ms ease;
   margin-bottom: clamp(2rem, 5vw, 4rem);
 }
 
@@ -229,7 +235,10 @@
   letter-spacing: 0.05em;
   box-shadow: 0 10px 15px -3px rgba(107, 158, 255, 0.2),
     0 4px 6px -4px rgba(107, 158, 255, 0.2);
-  transition: all 300ms ease;
+  transition:
+    background-color 300ms ease,
+    border-color 300ms ease,
+    color 300ms ease;
   cursor: pointer;
   gap: 10px;
 }

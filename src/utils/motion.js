@@ -2,30 +2,30 @@ export const easeOut = [0.22, 1, 0.36, 1]
 
 export const transitions = {
   smooth: {
-    duration: 0.45,
+    duration: 0.32,
     ease: easeOut,
   },
   quick: {
-    duration: 0.22,
+    duration: 0.18,
     ease: easeOut,
   },
   spring: {
     type: 'spring',
-    stiffness: 280,
-    damping: 26,
+    stiffness: 360,
+    damping: 34,
     mass: 0.8,
   },
 }
 
 export const viewport = {
   once: true,
-  amount: 0.18,
+  amount: 0.12,
 }
 
 export const pageVariants = {
   hidden: {
     opacity: 0,
-    y: 12,
+    y: 8,
   },
   show: {
     opacity: 1,
@@ -34,7 +34,7 @@ export const pageVariants = {
   },
   exit: {
     opacity: 0,
-    y: 8,
+    y: 4,
     transition: transitions.quick,
   },
 }
@@ -43,8 +43,8 @@ export const staggerContainer = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.07,
-      delayChildren: 0.04,
+      staggerChildren: 0.04,
+      delayChildren: 0.02,
     },
   },
 }
@@ -52,7 +52,7 @@ export const staggerContainer = {
 export const sectionVariants = {
   hidden: {
     opacity: 0,
-    y: 18,
+    y: 12,
   },
   show: {
     opacity: 1,
@@ -64,7 +64,7 @@ export const sectionVariants = {
 export const itemVariants = {
   hidden: {
     opacity: 0,
-    y: 12,
+    y: 8,
   },
   show: {
     opacity: 1,
@@ -74,8 +74,7 @@ export const itemVariants = {
 }
 
 export const cardHover = {
-  y: -4,
-  boxShadow: '0 20px 35px -22px rgba(107, 158, 255, 0.55)',
+  y: -3,
   transition: transitions.spring,
 }
 
@@ -85,6 +84,6 @@ export const buttonHover = {
 }
 
 export const buttonTap = {
-  scale: 0.98,
+  scale: 0.985,
   transition: transitions.quick,
 }

@@ -5,7 +5,9 @@
   border-radius: 1rem;
   margin: var(--spacing-sub-page);
   padding: clamp(1.5rem, 2.5vw, 3rem);
-  transition: all ease-in 0.3ms;
+  transition:
+    background-color 300ms ease,
+    border-color 300ms ease;
 }
 
 /*Light mode transitions*/

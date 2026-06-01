@@ -1,6 +1,6 @@
 import './Home.css'
 import { createElement, useContext } from 'react'
-import { m, useReducedMotion } from 'motion/react'
+import { m } from 'motion/react'
 import { Download } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { ThemeContext } from '../../context/ThemeContext.jsx'
@@ -18,7 +18,6 @@ const MotionButton = m.button
 
 export default function Home() {
   const { theme } = useContext(ThemeContext)
-  const shouldReduceMotion = useReducedMotion()
   const navigate = useNavigate()
 
   return (
@@ -29,8 +28,6 @@ export default function Home() {
             <MotionDiv
               className={`hero_img ${theme}`}
               whileHover={{ y: -2 }}
-              animate={shouldReduceMotion ? undefined : { y: [0, -4, 0] }}
-              transition={shouldReduceMotion ? undefined : { duration: 5, repeat: Infinity, ease: 'easeInOut' }}
             >
               <img src={profile_pic} alt="Profile Picture" width={400} height={400} loading="eager" fetchPriority="high" decoding="async" />
             </MotionDiv>

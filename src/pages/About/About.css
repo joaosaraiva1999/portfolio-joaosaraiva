@@ -71,7 +71,10 @@
   padding: 20px;
   color: rgb(210, 215, 225);
   align-items: center;
-  transition: all ease 300ms;
+  transition:
+    background-color 300ms ease,
+    border-color 300ms ease,
+    color 300ms ease;
 }
 
 .about-text p {

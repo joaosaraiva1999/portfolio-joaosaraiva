@@ -5,7 +5,9 @@
   border-radius: 1rem;
   margin: var(--spacing-sub-page);
   padding: clamp(1.5rem, 2.5vw, 3rem);
-  transition: all ease-in 0.3ms;
+  transition:
+    background-color 300ms ease,
+    border-color 300ms ease;
 }
 
 .education-header {
@@ -47,6 +49,31 @@
   color: oklab(0.999994 0.0000455678 0.0000200868 / 0.4);
 }
 
+.education-card-section {
+  width: 100%;
+
+}
+
+.education-card-label {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.education-card-label h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 12px;
+  color: oklab(0.999994 0.0000455678 0.0000200868 / 0.3);
+  text-transform: uppercase;
+}
+
+.education-card {
+  width: 100%;
+  border-radius: 15px;
+  background-color: ;
+}
+
 /*Hover Transitions*/
 
 /*Theme Transitions*/
@@ -55,6 +82,8 @@
   box-shadow:
     0 20px 25px -5px rgba(0, 0, 0, 0.2),
     0 8px 10px -6px rgba(0, 0, 0, 0.2);
-  transition: all ease-in 0.3ms;
+  transition:
+    background-color 300ms ease,
+    border-color 300ms ease;
   background-color: rgb(221 226 240 / 0.8);
 }

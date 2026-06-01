@@ -49,7 +49,9 @@
   border-radius: 1rem;
   padding: clamp(1rem, 1.2vw, 1.4rem);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  transition: all 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
   cursor: pointer;
   min-height: 13rem;
 }
@@ -100,7 +102,10 @@
   color: #9ca3af;
   font-weight: 300;
   letter-spacing: 0.08em;
-  transition: all 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
   font-size: 0.6875rem;
   text-transform: uppercase;
 }
@@ -131,7 +136,10 @@
   min-width: 2.2rem;
   min-height: 2.2rem;
   color: #9ca3af;
-  transition: all 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
   touch-action: manipulation;
 }
 
@@ -181,7 +189,7 @@
 
 .card-bottom span.light {
   color: oklch(0.410377 -0.00608023 -0.0590566);
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .card-top div.light {

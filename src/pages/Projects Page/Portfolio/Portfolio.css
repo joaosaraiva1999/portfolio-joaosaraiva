@@ -6,7 +6,9 @@
   margin: var(--spacing-sub-page);
   padding: clamp(1.5rem, 2.5vw, 3rem);
   gap: clamp(1.5rem, 2vw, 2.5rem);
-  transition: all ease-in 0.3ms;
+  transition:
+    background-color 300ms ease,
+    border-color 300ms ease;
 }
 
 .portfolio-intro-section {
@@ -52,7 +54,10 @@
   color: #9ca3af;
   font-weight: 300;
   letter-spacing: 0.08em;
-  transition: all 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
   font-size: 0.6875rem;
   text-transform: uppercase;
   cursor: pointer;
@@ -87,7 +92,10 @@
   color: oklch(0.999994 0.0000455677 0.0000200868 / 0.6);
   font-weight: 300;
   letter-spacing: 0.08em;
-  transition: all 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
   font-size: 0.6875rem;
   text-transform: uppercase;
   cursor: default;
@@ -195,7 +203,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: all 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
   cursor: pointer;
   font-family: 'Inter', sans-serif !important;
 }
@@ -213,14 +223,14 @@
 .visit-div .visit-text {
   font-size: 14px;
   color: oklab(0.999994 0.0000455677 0.0000200868 / 0.7);
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .svg-div svg {
   height: 20px;
   width: 20px;
   color: rgba(255, 255, 255, 0.30);
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .Image-section {
@@ -307,7 +317,9 @@
   box-shadow:
     0 20px 25px -5px rgba(0, 0, 0, 0.2),
     0 8px 10px -6px rgba(0, 0, 0, 0.2);
-  transition: all ease-in 0.3ms;
+  transition:
+    background-color 300ms ease,
+    border-color 300ms ease;
 }
 
 .close-btn.light {
