@@ -308,6 +308,7 @@
     0 20px 25px -5px rgba(0, 0, 0, 0.2),
     0 8px 10px -6px rgba(0, 0, 0, 0.2);
   transition: all ease-in 0.3ms;
+  background-color: rgb(221 226 240 / 0.8);
 }
 
 .close-btn.light {
