@@ -72,9 +72,176 @@
   background-color: oklab(0.999994 0.0000455678 0.0000200868 / 0.03);
   padding: 24px;
   border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: default;
+  transition: all 0.3s ease;
+  margin-bottom: 64px;
+}
+
+.card-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.header-info h3 {
+  font-family: 'Syne', sans-serif;
+  color: #ffff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 3px;
+  transition: all 0.3s ease;
+}
+
+.header-info span {
+  color: oklab(0.706876 -0.0206823 -0.151336 / 0.7);
+  font-size: 14px;
+}
+
+
+.header-date span {
+  color: oklab(0.999994 0.0000455678 0.0000200868 / 0.3);
+  font-size: 14px;
+}
+
+.card-desc span {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 14px;
+}
+
+.skills-label {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.skills-label h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 12px;
+  color: oklab(0.999994 0.0000455678 0.0000200868 / 0.3);
+  text-transform: uppercase;
+}
+
+.front-section,
+.back-section,
+.expertise-section {
+  width: 31%;
+  background-color: oklab(0.999994 0.0000455678 0.0000200868 / 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.skills-section {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+
+}
+
+.stack-card-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.icon-grad-skills {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  border: 1px solid rgb(107 158 255 / 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6B9EFF;
+  background-color: rgba(107, 158, 255, 0.1);
+}
+
+.icon-grad-skills svg {
+  height: 16px;
+  width: 16px;
+}
+
+.title-skill {
+  color: #ffff;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.stack-div {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.stack-div span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 0.6px solid rgba(255, 255, 255, 0.08);
+  background-color: oklab(0.9994 0.0000455678 0.0000200868 / 0.04);
+  color: #9ca3af;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  transition: all 0.3s ease;
+  font-size: 12px;
+  cursor: default;
 }
 
 /*Hover Transitions*/
+
+.education-card:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 0.3px solid #6B9EFF;
+}
+
+.education-card.light:hover {
+  border: 0.3px solid #6B9EFF;
+  background-color: rgb(255 255 255 / 0.6);
+
+}
+
+.education-card:hover h3 {
+  color: #6B9EFF;
+}
+
+.education-card:hover h3.light {
+  color: #6B9EFF;
+}
+
+.front-section:hover,
+.back-section:hover,
+.expertise-section:hover {
+  border: 1px solid rgba(107, 158, 255, 0.4);
+}
+
+.front-section.light:hover,
+.back-section.light:hover,
+.expertise-section.light:hover {
+  border: 1px solid rgba(107, 158, 255, 0.4);
+}
+
+.stack-div span:hover {
+  border: 1px solid rgba(107, 158, 255, 0.5);
+  color: #6B9EFF;
+}
+
+.stack-div span.light:hover {
+  border: 1px solid rgba(107, 158, 255, 0.5);
+  color: #6B9EFF;
+}
 
 /*Theme Transitions*/
 
@@ -84,4 +251,60 @@
     0 8px 10px -6px rgba(0, 0, 0, 0.2);
   transition: all ease-in 0.3ms;
   background-color: rgb(221 226 240 / 0.8);
+}
+
+.education-title-first.light {
+  color: #1e2640;
+}
+
+.education-title-last.light {
+  color: #3a4a6bb3;
+}
+
+.education-card-label h2.light {
+  color: #3a4a6bb3;
+}
+
+.education-card h3.light {
+  color: #1e2640;
+}
+
+.header-date span.light {
+  color: #3a4a6b99;
+}
+
+.card-desc span.light {
+  color: #344060;
+}
+
+.skills-label h2.light {
+  color: #3a4a6bb3;
+}
+
+.front-section.light,
+.back-section.light,
+.expertise-section.light {
+  background: oklab(0.999994 0.0000455678 0.0000200868 / 0.4);
+  border-color: rgb(0 0 0 / 0.1);
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.education-card.light {
+  background: oklab(0.999994 0.0000455678 0.0000200868 / 0.4);
+  border-color: rgb(0 0 0 / 0.1);
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.title-skill.light {
+  color: #1e2640;
+}
+
+.stack-div span.light {
+  background-color: oklab(0.999994 0.0000455678 0.0000200868 / 0.5);
+  border-color: rgb(0 0 0 / 0.1);
+  color: #3a4a6b;
 }

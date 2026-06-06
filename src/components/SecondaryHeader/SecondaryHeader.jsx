@@ -93,7 +93,7 @@ export default function SecondaryHeader() {
           type="button"
           aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
           onClick={toggleTheme}
-          className={`toggle-theme ${theme}`}
+          className={`theme ${theme}`}
         >
           {theme === 'dark' ? <Sun className="theme-icon" size={18} /> : <Moon className="theme-icon" size={18} />}
         </MotionButton>

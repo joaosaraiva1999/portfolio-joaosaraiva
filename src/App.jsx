@@ -2,12 +2,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { lazy, Suspense } from 'react'
 import { AnimatePresence, LazyMotion, MotionConfig, domAnimation } from 'motion/react'
 import Header from './components/Header/Header.jsx'
-import SecondaryHeader from './components/SecondaryHeader/SecondaryHeader.jsx'
-import Footer from './components/Footer/Footer.jsx'
 import { ThemeProvider, useTheme } from './context/ThemeContext.jsx'
 import { useLocation } from 'react-router-dom'
 
 const Home = lazy(() => import('./pages/Home/Home.jsx'))
+const Footer = lazy(() => import('./components/Footer/Footer.jsx'))
+const SecondaryHeader = lazy(() => import('./components/SecondaryHeader/SecondaryHeader.jsx'))
 const About = lazy(() => import('./pages/About/About.jsx'))
 const Contacts = lazy(() => import('./pages/Contacts/Contacts.jsx'))
 const Projects = lazy(() => import('./pages/Projects Page/Projects.jsx'))
@@ -21,7 +21,13 @@ function AppLayout() {
 
   return (
     <div className={`app-wrapper ${theme === 'light' ? 'light' : ''}`}>
-      {localpath.pathname !== '/' ? <SecondaryHeader /> : <Header />}
+      {localpath.pathname !== '/' ? (
+        <Suspense fallback={null}>
+          <SecondaryHeader />
+        </Suspense>
+      ) : (
+        <Header />
+      )}
       <Suspense fallback={null}>
         <AnimatePresence mode="wait">
           <Routes location={localpath} key={localpath.pathname}>
@@ -35,7 +41,11 @@ function AppLayout() {
           </Routes>
         </AnimatePresence>
       </Suspense>
-      {localpath.pathname !== '/' ? '' : <Footer />}
+      {localpath.pathname === '/' && (
+        <Suspense fallback={null}>
+          <Footer />
+        </Suspense>
+      )}
     </div>
   )
 }
