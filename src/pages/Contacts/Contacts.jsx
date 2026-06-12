@@ -18,6 +18,7 @@ const MotionP = m.p
 
 
 export default function Contacts() {
+  const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY
   const {
     formRef,
     recaptchaRef,
@@ -33,7 +34,7 @@ export default function Contacts() {
   } = useContactForm()
 
   const { theme } = useContext(ThemeContext)
-  const isSendDisabled = status === 'sending' || !recaptchaToken
+  const isSendDisabled = status === 'sending' || !recaptchaSiteKey || !recaptchaToken
 
   return (
     <MotionMain className={`contacts-page ${theme}`} variants={pageVariants} initial="hidden" animate="show" exit="exit">
@@ -90,13 +91,17 @@ export default function Contacts() {
               )}
             </MotionDiv>
             <MotionDiv className="recaptcha-field" variants={itemVariants}>
-              <ReCAPTCHA
-                ref={recaptchaRef}
-                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-                theme={theme === 'light' ? 'light' : 'dark'}
-                onChange={handleRecaptchaChange}
-                onExpired={() => handleRecaptchaChange('')}
-              />
+              {recaptchaSiteKey ? (
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey={recaptchaSiteKey}
+                  theme={theme === 'light' ? 'light' : 'dark'}
+                  onChange={handleRecaptchaChange}
+                  onExpired={() => handleRecaptchaChange('')}
+                />
+              ) : (
+                <p className="form-error">reCAPTCHA is not configured.</p>
+              )}
 
               {errors.recaptchaToken && (
                 <p className="form-error">{errors.recaptchaToken}</p>
