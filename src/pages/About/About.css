@@ -65,6 +65,8 @@
 }
 
 .card-experience {
+  position: relative;
+  overflow: hidden;
   background-color: oklab(0.999994 0.0000455678 0.0000200868 / 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
@@ -72,6 +74,15 @@
   color: rgb(210, 215, 225);
   align-items: center;
   transition: all ease 300ms;
+}
+
+.card-experience::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background-color: rgba(107, 158, 255, 0.55);
+  opacity: 0.75;
 }
 
 .about-text p {

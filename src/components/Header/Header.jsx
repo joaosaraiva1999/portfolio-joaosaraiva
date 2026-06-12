@@ -90,7 +90,7 @@ export default function Header() {
               <NavLink key={href} to={href}>
                 {({ isActive }) => (
                   <>
-                    <MotionSpan whileHover={{ y: -1 }} transition={transitions.quick}>{label}</MotionSpan>
+                    <MotionSpan>{label}</MotionSpan>
                     {isActive && <MotionSpan className="nav-active-indicator" layoutId="main-nav-active" />}
                   </>
                 )}

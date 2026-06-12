@@ -84,6 +84,22 @@ export const buttonHover = {
   transition: transitions.spring,
 }
 
+export const contactHoverTransition = {
+  duration: 0.3,
+  ease: easeOut,
+}
+
+export const contactCardHover = {
+  y: -4,
+  boxShadow: '0 20px 35px -22px rgba(107, 158, 255, 0.55)',
+  transition: contactHoverTransition,
+}
+
+export const contactButtonHover = {
+  y: -2,
+  transition: contactHoverTransition,
+}
+
 export const buttonTap = {
   scale: 0.98,
   transition: transitions.quick,

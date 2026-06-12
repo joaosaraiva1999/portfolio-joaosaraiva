@@ -53,7 +53,7 @@ export default function Education() {
         <MotionH2 className={theme}>SKILLS</MotionH2>
       </MotionDiv>
       <MotionSection className={`skills-section`}>
-        <MotionDiv className={`front-section ${theme}`}>
+        <MotionDiv className={`front-section ${theme}`} variants={itemVariants} >
           <div className="stack-card-header">
             <div className={`icon-grad-skills ${theme}`}><Code2 /></div>
             <span className={`title-skill ${theme}`}>Front-End</span>
@@ -64,7 +64,7 @@ export default function Education() {
             ))}
           </div>
         </MotionDiv>
-        <MotionDiv className={`back-section ${theme}`}>
+        <MotionDiv className={`back-section ${theme}`} variants={itemVariants} >
           <div className="stack-card-header">
             <div className={`icon-grad-skills ${theme}`}><Wrench /></div>
             <span className={`title-skill ${theme}`}>Back-End</span>
@@ -75,7 +75,7 @@ export default function Education() {
             ))}
           </div>
         </MotionDiv>
-        <MotionDiv className={`expertise-section ${theme}`}>
+        <MotionDiv className={`expertise-section ${theme}`} variants={itemVariants} >
           <div className="stack-card-header">
             <div className={`icon-grad-skills ${theme}`}><Target /></div>
             <span className={`title-skill ${theme}`}>Areas of Expertise</span>
