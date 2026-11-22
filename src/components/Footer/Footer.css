@@ -249,6 +249,11 @@
   .Second_Footer_Section,
   .Third_Footer_Section {
     padding-left: 0;
+    padding-right: 0;
+  }
+
+  .Second_Footer_Section {
+    padding: 0;
   }
 
   .First_Footer_Section,

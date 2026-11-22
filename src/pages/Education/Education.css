@@ -227,6 +227,11 @@
 @media (max-width: 768px) {
   .education-header {
     align-items: flex-start;
+    margin-bottom: 40px;
+  }
+
+  .education-title-first {
+    font-size: 28px;
   }
 
   .card-header {
@@ -240,6 +245,31 @@
 
   .skills-section {
     grid-template-columns: 1fr;
+  }
+
+  .education-card {
+    margin-bottom: 40px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-title-first {
+    font-size: 24px;
+  }
+
+  .education-card {
+    margin-bottom: 32px;
+    padding: 16px;
+  }
+
+  .education-header {
+    margin-bottom: 32px;
+  }
+
+  .stack-div span {
+    font-size: 11px;
+    padding: 4px 10px;
   }
 }
 

@@ -37,14 +37,12 @@
   flex-direction: column;
   gap: 24px;
   cursor: pointer;
-  transition: background 0.15s;
   padding: 32px 28px;
   align-items: center;
   box-shadow:
     0 20px 25px -5px rgba(0, 0, 0, 0.2),
     0 8px 10px -6px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
-
 }
 
 .card-icon {
@@ -146,7 +144,6 @@
   height: 160px;
   overflow: hidden;
   border-radius: 50%;
-  overflow: hidden;
   border: 2px solid rgba(255, 255, 255, 0.08);
   background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
   backdrop-filter: blur(4px);
@@ -221,10 +218,9 @@
 
 .work-status-text {
   color: #6B9EFF;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   font-weight: 300;
-  font-size: 12px;
 }
 
 .download-resume {
@@ -284,7 +280,13 @@
 }
 
 .quicknav-container {
-  margin: 0 290px 0 290px;
+  margin: 0 290px;
+}
+
+@media (max-width: 1200px) {
+  .quicknav-container {
+    margin: 0 4vw;
+  }
 }
 
 /*Hover Effects*/
@@ -478,14 +480,6 @@
   }
 }
 
-
-
-@media (max-width: 1200px) {
-  .quicknav-container {
-    margin: 0 4vw;
-  }
-}
-
 @media (max-width: 768px) {
   .quicknav-container {
     margin: 0 1rem;
@@ -494,8 +488,6 @@
   .hero {
     padding: 2rem 1.5rem;
   }
-
-
 
   .card {
     padding: 24px 20px;
@@ -542,6 +534,7 @@
 
   .quicknav-cards {
     grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .hero_img {
@@ -551,7 +544,7 @@
 
   .hero_skills span {
     padding: 5px 10px;
-    font-size: 9px;
+    font-size: 10px;
     letter-spacing: 1px;
   }
 

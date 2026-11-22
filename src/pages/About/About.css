@@ -5,16 +5,17 @@
   border-radius: 12px;
   margin: var(--spacing-sub-page);
   display: flex;
-  padding: clamp(1.5rem, 4vw, 3rem);
-  gap: 4rem;
+  flex-wrap: wrap;
+  padding: clamp(1.25rem, 4vw, 3rem);
+  gap: clamp(2rem, 5vw, 4rem);
 }
 
+/* Columns sit side by side only when each can be at least ~22rem wide;
+   otherwise they wrap and stack automatically, whatever the viewport. */
+.about-left,
 .about-right {
-  width: 50%;
-}
-
-.about-left {
-  width: 50%;
+  flex: 1 1 22rem;
+  min-width: 0;
 }
 
 .title h1 {
@@ -47,21 +48,30 @@
 
 .grid-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 10rem), 1fr));
   gap: 1rem;
   align-items: stretch;
   margin-bottom: 42px;
 }
 
-
+/* Explicit values so the global .card styles from Home.css don't leak in */
 .grid-list .card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  text-align: center;
   background-color: oklab(0.999994 0.0000455678 0.0000200868 / 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   padding: 16px 20px;
   color: rgb(210, 215, 225);
-  align-items: center;
   cursor: default;
+  box-shadow: none;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  min-width: 0;
 }
 
 .card-experience {
@@ -173,17 +183,13 @@
 
 /* Media Queries */
 
+@media (max-width: 1024px) {
+  .title h1 {
+    font-size: 40px;
+  }
+}
+
 @media (max-width: 768px) {
-  .about-page {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .about-left,
-  .about-right {
-    width: 100%;
-  }
-
   .title h1 {
     font-size: 36px;
   }
@@ -191,23 +197,24 @@
   .about-text p {
     font-size: 16px;
   }
+
+  .title-skills h2,
+  .title-tools h2,
+  .title-experience h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
 }
 
-@media (max-width: 480px) {
-  .about-page {
-    gap: 1.5rem;
-  }
-
-  .grid-list {
-    grid-template-columns: 1fr;
-  }
-
+@media (max-width: 600px) {
   .experience-first-section {
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
   }
+}
 
+@media (max-width: 480px) {
   .title h1 {
     font-size: 28px;
     margin-bottom: 24px;

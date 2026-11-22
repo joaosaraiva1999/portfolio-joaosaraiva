@@ -99,6 +99,7 @@
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 24px;
   margin-bottom: 40px;
@@ -377,13 +378,15 @@
 
 /*Media Queries*/
 
-@media (max-width: 768px) {
-  .project-details-section {
-    flex-wrap: wrap;
+@media (max-width: 1024px) {
+  .overview-section {
+    gap: 2rem;
   }
+}
 
+@media (max-width: 768px) {
   .detail-section {
-    width: 50%;
+    width: calc(50% - 12px);
   }
 
   .overview-section {

@@ -334,6 +334,17 @@
   }
 }
 
+@media (max-width: 768px) {
+  .contacts-title {
+    font-size: 36px;
+  }
+
+  .contacts-description {
+    font-size: 17px;
+    margin-bottom: 32px;
+  }
+}
+
 @media (max-width: 560px) {
   .contact-card {
     align-items: flex-start;
@@ -342,6 +353,36 @@
   .contact-form {
     padding: 1rem;
     gap: 18px;
+  }
+
+  .info-div p:last-child {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contacts-title {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .contacts-description {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+
+  .form-field input {
+    min-height: 48px;
+    padding: 14px 16px;
+  }
+
+  .form-field textarea {
+    min-height: 140px;
+    padding: 14px 16px;
+  }
+
+  .form-field label {
+    font-size: 13px;
   }
 }
 

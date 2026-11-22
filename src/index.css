@@ -1,7 +1,8 @@
 /* Google Fonts loaded via <link> in index.html for non-blocking font fetch */
 
 :root {
-  --spacing-sub-page: 0 337px 0 337px;
+  /* Fluid side spacing: content caps at ~1100px wide and is centered, never squeezed */
+  --spacing-sub-page: 0 max(4vw, calc((100% - 1100px) / 2));
   --app-margin: clamp(8px, 2vw, 20px);
 }
 
