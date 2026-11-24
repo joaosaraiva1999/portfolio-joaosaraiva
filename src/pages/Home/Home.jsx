@@ -48,7 +48,7 @@ export default function Home() {
           <MotionDiv className="profile-intro" variants={itemVariants}>
             <p className={theme}>I'm a Junior Web Developer who enjoys building responsive, user-focused web applications. I work with JavaScript, React, HTML/CSS, ASP.NET, SQL and PHP/Laravel, and I like integrating APIs to connect systems and simplify workflows.</p>
           </MotionDiv>
-          <MotionButton className={`download-resume ${theme}`} variants={itemVariants} whileHover={buttonHover} whileTap={buttonTap}>
+          <MotionButton className={`download-resume ${theme}`} variants={itemVariants} whileHover={buttonHover} whileTap={buttonTap} onClick={() => window.open('/Jo%C3%A3o_Saraiva_-_Junior_Web_Developer.pdf', '_blank')}>
             VIEW RESUME<span style={{ color: '#6B9EFF', paddingTop: '0.2rem' }}><Download size={18} /></span>
           </MotionButton>
         </MotionSection>
